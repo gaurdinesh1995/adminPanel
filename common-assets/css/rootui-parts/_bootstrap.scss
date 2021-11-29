@@ -1,0 +1,42 @@
+
+
+// Gaps
+$row_gaps: (
+    "xs": 10px,
+    "sm": 20px,
+    "md": 40px,
+    "lg": 60px
+) !default;
+
+// vertical gap
+.row.vertical-gap {
+    margin-top: -30px;
+
+    > .col,
+    > [class*="col-"] {
+        padding-top: 30px;
+    }
+}
+
+@each $screen, $size in $row_gaps {
+    .row.#{$screen}-gap {
+        margin-right: #{$size / -2};
+        margin-left: #{$size / -2};
+
+        > .col,
+        > [class*="col-"] {
+            padding-right: #{$size / 2};
+            padding-left: #{$size / 2};
+        }
+
+        // vertical
+        &.vertical-gap {
+            margin-top: #{$size / -1};
+
+            > .col,
+            > [class*="col-"] {
+                padding-top: $size;
+            }
+        }
+    }
+}

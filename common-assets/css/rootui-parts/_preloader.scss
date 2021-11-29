@@ -1,0 +1,51 @@
+$preloader_boxes: 10 !default;
+$preloader_duration_all: .8s !default;
+$preloader_duration: $preloader_duration_all / $preloader_boxes !default;
+$preloader_color: $color_brand !default;
+
+.rui-page-preloader {
+    display: none;
+}
+
+.rui-page-preloader.rui-page-preloader-active {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    opacity: 0;
+    transition: .3s opacity ease-in-out;
+    z-index: 1002;
+
+    .rui-page-loading-state & {
+        opacity: 1;
+    }
+
+    .rui-page-preloader-inner {
+        display: flex;
+        height: 100%;
+        transform: translateZ(0);
+
+        > div {
+            flex: 1;
+            background: #{$preloader_color};
+            box-shadow: 0 2px 20px #{$preloader_color};
+            animation: rui-preloader-animation #{$preloader_duration_all} infinite alternate ease;
+
+            @for $i from 1 through $preloader_boxes {
+                &:nth-child(#{$i}) {
+                    animation-delay: $preloader_duration * $i;
+                }
+            }
+        }
+    }
+}
+
+@keyframes rui-preloader-animation {
+    100% {
+        flex: 10;
+        background: transparent;
+        box-shadow: 0 0 0 transparent;
+    }
+}

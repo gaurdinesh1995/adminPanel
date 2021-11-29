@@ -1,0 +1,13 @@
+.rui-feature {
+    background-color: $color_dark_1;
+    border-color: $color_dark_3;
+
+    .rui-feature-icon {
+        color: $color_secondary;
+    }
+
+    &:hover,
+    &.hover {
+        border-color: $color_dark_4;
+    }
+}

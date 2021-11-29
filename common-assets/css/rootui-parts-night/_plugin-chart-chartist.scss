@@ -1,0 +1,9 @@
+.ct-label {
+    color: $color_dark_6;
+}
+.ct-chart-pie .ct-label {
+    fill: $color_text_1;
+}
+.rui-chartist-donut::after {
+    border-color: $color_dark_3;
+}

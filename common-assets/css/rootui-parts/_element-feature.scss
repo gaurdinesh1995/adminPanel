@@ -1,0 +1,32 @@
+.rui-feature {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid $color_grey_2;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out;
+
+    .rui-feature-icon {
+        display: inline-flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        margin-right: 10px;
+        color: $color_secondary;
+
+        > span,
+        > svg {
+            width: 24px;
+            min-width: 24px;
+            height: 24px;
+        }
+    }
+
+    &:hover,
+    &.hover {
+        border-color: $color_grey_3;
+    }
+}

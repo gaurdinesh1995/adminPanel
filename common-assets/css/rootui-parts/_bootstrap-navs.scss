@@ -1,0 +1,256 @@
+.nav {
+    .nav {
+        &:not(.dropdown-menu) {
+            padding-left: 20px;
+        }
+        .nav-link {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 2px;
+                height: 2px;
+                margin-top: -1px;
+                background-color: $color_grey_4;
+                border-radius: 2px;
+            }
+            &:hover::before,
+            &.hover::before,
+            &:focus::before,
+            &.focus::before,
+            &.active::before {
+                background-color: $color_text_1;
+            }
+        }
+    }
+    &.dropdown-menu .nav-link,
+    &.dropdown-menu .dropdown-item {
+        padding: 9px 15px 9px 15px;
+
+        > .rui-nav-circle,
+        > .rui-dropdown-circle {
+            left: 4px;
+        }
+    }
+    .nav-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 8.5px 20px;
+        color: $color_grey_6;
+        transition: color .1s ease-in-out, border-color .1s ease-in-out, background-color .15s ease-in-out;
+
+        > span,
+        > svg {
+            z-index: 1;
+        }
+        > span:not([class]) {
+            color: $color_text_1;
+        }
+        > .rui-nav-circle {
+            position: absolute;
+            top: 0;
+            left: -2px;
+            width: 36px;
+            height: 36px;
+            background-color: $color_grey_1;
+            border-radius: 100%;
+            opacity: 0;
+            transition: opacity .1s ease-in-out;
+            z-index: -1;
+        }
+        > .rui-icon {
+            display: inline-block;
+            margin: 0 14px -1px;
+            stroke: $color_grey_5;
+            transition: stroke .1s ease-in-out;
+
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        > .badge,
+        > .badge-circle {
+            position: absolute;
+            top: -5px;
+            left: 10px;
+            min-width: 11px;
+            height: 11px;
+            font-size: 7px;
+            box-shadow: 0 0 0 2px #fff;
+        }
+
+        &.show {
+            color: $color_grey_5;
+
+            > span:not([class]) {
+                color: $color_text_1;
+            }
+            > .rui-icon {
+                stroke: $color_grey_4;
+            }
+        }
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            color: $color_text_1;
+
+            > span:not([class]) {
+                color: $color_text_1;
+            }
+            > .rui-nav-circle {
+                opacity: 1;
+            }
+            > .rui-icon {
+                stroke: $color_text_1;
+            }
+        }
+        &.active {
+            color: $color_text_1;
+
+            > span:not([class]) {
+                color: $color_brand;
+            }
+            > .rui-icon {
+                stroke: $color_brand;
+            }
+        }
+        &.disabled {
+            color: $color_grey_3;
+
+            > span:not([class]) {
+                color: $color_grey_3;
+            }
+            > .rui-icon {
+                stroke: $color_grey_3;
+            }
+        }
+    }
+}
+// Tabs
+.nav-tabs {
+    border-color: $color_separator;
+
+    + .tab-content {
+        margin-top: 20px;
+    }
+    .nav-link {
+        position: relative;
+        padding: 0 15px 10px;
+        border: 0;
+        border-bottom: 2px solid transparent;
+        z-index: 1;
+
+        &.show {
+            color: $color_grey_5;
+        }
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            color: $color_text_1;
+            border-bottom-color: transparent;
+        }
+        &.active {
+            color: $color_brand;
+            border-bottom-color: rgba($color_brand, .8);
+        }
+    }
+}
+// Pills
+.nav-pills {
+    position: relative;
+    display: inline-flex;
+    padding: 2px;
+    background-color: $color_grey_2;
+    border-radius: .25rem;
+
+    + .tab-content {
+        margin-top: 20px;
+    }
+    .nav-link {
+        position: relative;
+        padding: 10px 15px;
+        font-size: 11px;
+        font-weight: 700;
+        color: $color_grey_6;
+        text-transform: uppercase;
+
+        &.show {
+            color: $color_grey_6;
+        }
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            color: $color_secondary;
+            border-color: transparent;
+        }
+        &.active {
+            color: $color_secondary;
+            background-color: #fff;
+        }
+        &.disabled {
+            color: $color_grey_4;
+        }
+    }
+}
+// Sliding
+.rui-tabs-sliding {
+    position: relative;
+
+    &.nav-pills {
+        .rui-tabs-link.active {
+            background-color: #fff;
+        }
+        .rui-tabs-slide {
+            top: 0;
+            left: 0;
+            height: 36.4px;
+            background-color: #fff;
+            border-radius: .15rem;
+            z-index: 0;
+        }
+    }
+    &.nav-tabs {
+        .rui-tabs-link.active {
+            border-bottom-color: rgba($color_brand, .8);
+        }
+        .rui-tabs-slide {
+            top: 0;
+            left: 0;
+            height: 31px;
+            border-bottom: 2px solid rgba($color_brand, .8);
+            z-index: 1;
+        }
+    }
+
+    .rui-tabs-slide {
+        position: absolute;
+        opacity: 0;
+        will-change: opacity;
+        transition: opacity .15s ease-in-out;
+        transform: translate(2px, 2px);
+    }
+}
+.rui-tabs-sliding-ready {
+    &.nav-pills .rui-tabs-link.active {
+        background-color: transparent;
+    }
+    &.nav-tabs .rui-tabs-link.active {
+        background-color: transparent;
+        border-bottom-color: transparent;
+    }
+    .rui-tabs-slide {
+        opacity: 1;
+        will-change: transform, opacity;
+        transition: transform .15s ease-in-out, width .15s ease-in-out, opacity .15s ease-in-out;
+    }
+}

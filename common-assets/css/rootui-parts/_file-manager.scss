@@ -1,0 +1,101 @@
+.rui-filemanager {
+    .rui-filemanager-table {
+        min-width: 880px;
+
+        th,
+        td {
+            border: 0;
+        }
+        thead th {
+            font-weight: 400;
+            color: $color_grey_5;
+
+            &.sorting_asc,
+            &.sorting_desc {
+                color: $color_secondary;
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+        tbody {
+            tr + tr {
+                th,
+                td {
+                    padding-top: 10px;
+                }
+            }
+            th,
+            td {
+                padding: 0;
+            }
+            td:last-child > .rui-filemanager-file {
+                border-radius: 0 .25rem .25rem 0;
+            }
+            th > .rui-filemanager-file {
+                border-radius: .25rem 0 0 .25rem;
+            }
+        }
+        .rui-filemanager-table-name {
+            width: 427px;
+        }
+        .rui-filemanager-table-size {
+            width: 234px;
+        }
+        .rui-filemanager-table-date {
+            width: 338px;
+        }
+        .rui-filemanager-table-icon {
+            width: 141px;
+        }
+    }
+    .dataTables_wrapper {
+        padding-bottom: 0;
+    }
+}
+.rui-filemanager-head {
+    padding: 15px 30px;
+    margin-bottom: 40px;
+    border-top: 1px solid $color_separator;
+    border-bottom: 1px solid $color_separator;
+}
+.rui-filemanager-file {
+    display: block;
+    padding: 15px 25px;
+    background-color: $color_grey_1;
+}
+.rui-filemanager-file-link {
+    display: flex;
+    align-items: center;
+    color: $color_text_2;
+    transition: color .15s ease-in-out;
+
+    > .rui-icon {
+        margin-right: 10px;
+        margin-bottom: -1px;
+    }
+
+    &:hover {
+        color: $color_text_2;
+        text-decoration: none;
+    }
+}
+.rui-filemanager-file-icon {
+    color: $color_grey_5;
+
+    &:hover {
+        color: $color_text_2;
+    }
+}
+
+.rui-filemanager-file-button {
+   
+    margin-left:2px;
+    &:hover {
+        color: $color_text_2;
+    }
+}

@@ -1,0 +1,75 @@
+.rui-dropzone {
+    background-color: $color_dark_1;
+    border-color: $color_dark_3;
+
+    &:hover {
+        border-color: $color_dark_4;
+    }
+    &.dz-drag-hover {
+        border-color: lighten($color_brand, 10%);
+    }
+    .rui-dropzone-icon {
+        color: $color_dark_5;
+    }
+    .rui-dropzone-text {
+        color: $color_secondary;
+    }
+    .dz-preview.dz-image-preview {
+        background: $color_dark_1;
+    }
+    .dz-preview,
+    .dz-preview.dz-file-preview {
+        .dz-remove {
+            color: $color_dark_6;
+            background-color: $color_dark_1;
+
+            &:hover {
+                color: $color_secondary;
+            }
+        }
+        .dz-image:not(.rui-dropzone-image) {
+            background-color: $color_dark_3;
+        }
+        .rui-dropzone-image {
+            background-color: $color_dark_1;
+            border-color: $color_dark_3;
+        }
+        .dz-details {
+            .dz-size {
+                color: $color_dark_6;
+            }
+            .dz-filename {
+                color: $color_secondary;
+
+                span {
+                    background: transparent;
+                }
+
+                &:hover span {
+                    background: transparent;
+                }
+            }
+        }
+        .dz-progress {
+            background-color: rgba(255, 255, 255, .95);
+
+            .dz-upload {
+                background-color: $color_text_1;
+            }
+        }
+        .dz-error-message {
+            background: $color_danger;
+        }
+        .dz-error-mark,
+        &.dz-error .dz-error-mark {
+            background-color: rgba($color_danger, .2);
+        }
+        .dz-success-mark {
+            background-color: rgba($color_success, .2);
+        }
+
+        &:hover .rui-dropzone-image {
+            border-color: $color_dark_4;
+        }
+    }
+}

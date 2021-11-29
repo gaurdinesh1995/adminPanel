@@ -1,0 +1,29 @@
+.rui-jstree {
+    .jstree-ocl:hover + .jstree-anchor > .rui-icon {
+        stroke: $color_text_1;
+    }
+    .jstree-anchor {
+        > .rui-icon {
+            stroke: $color_dark_7;
+        }
+        &:hover > .rui-icon {
+            stroke: $color_text_1;
+        }
+    }
+    .jstree-open {
+        > .jstree-ocl:hover + .jstree-anchor > .rui-icon {
+            stroke: $color_brand;
+        }
+        > .jstree-anchor {
+            color: $color_brand;
+
+            > .rui-icon {
+                stroke: $color_brand;
+            }
+        }
+    }
+}
+.rui-jstree-lines .jstree-children .jstree-children .jstree-node::before {
+    border-bottom-color: $color_dark_3;
+    border-left-color: $color_dark_3;
+}

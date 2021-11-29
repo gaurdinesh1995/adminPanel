@@ -1,0 +1,20 @@
+.breadcrumb .breadcrumb-item,
+.breadcrumb .breadcrumb-item.show {
+    color: $color_dark_6;
+
+    > a {
+        color: $color_dark_6;
+
+        &::after {
+            background-color: $color_dark_2;
+        }
+    }
+    &:hover > a,
+    &.hover > a {
+        color: $color_secondary;
+
+        &::after {
+            background-color: $color_dark_2;
+        }
+    }
+}

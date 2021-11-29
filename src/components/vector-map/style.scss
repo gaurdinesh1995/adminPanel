@@ -1,0 +1,54 @@
+@import "~jqvmap/dist/jqvmap.min.css";
+
+@import "../../../common-assets/css/variables";
+
+.rui-jqvmap {
+  .jvectormap-container {
+    position: relative;
+    width: 100%;
+    min-height: 389px;
+    border-radius: 0.25rem;
+
+    @include media-breakpoint-down(sm) {
+      min-height: 300px;
+    }
+  }
+
+  .jvectormap-zoomin,
+  .jvectormap-zoomout {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    line-height: 18px;
+    color: $color_secondary;
+    text-align: center;
+    cursor: pointer;
+    background-color: $color_grey_3;
+    border-radius: 3px;
+    transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+
+    &:hover {
+      color: $color_text_1;
+      background-color: $color_grey_4;
+    }
+  }
+  .jvectormap-zoomout {
+    top: 45px;
+  }
+  .jvectormap-region {
+    transition: fill 0.1s ease-in-out;
+  }
+}
+.jvectormap-tip {
+  position: absolute;
+  display: none;
+  padding: 1px 5px;
+  font-size: smaller;
+  color: #fff;
+  background-color: $color_dark;
+  border-radius: 0.2rem;
+  z-index: 3;
+}

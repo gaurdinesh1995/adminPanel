@@ -1,0 +1,22 @@
+.toast {
+    background-color: $color_dropdown_bg;
+    border-color: $color_dropdown_border;
+    border-left-color: $color_brand;
+    box-shadow: 0 3px 10px $color_dropdown_shadow;
+}
+.toast-header {
+    background-color: $color_dropdown_bg;
+}
+.toast-date {
+    color: $color_dark_6;
+}
+.toast-close {
+    color: $color_dark_6;
+
+    &:hover {
+        color: $color_text_1;
+    }
+}
+.rui-toast-container .rui-toast {
+    background-color: $color_dropdown_bg;
+}

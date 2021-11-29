@@ -1,0 +1,15 @@
+// Default
+.rui-widget {
+    border-color: $color_dark_3;
+
+    .rui-widget-head {
+        background-color: $color_dark_2;
+        border-bottom-color: $color_dark_3;
+    }
+    .rui-widget-content > .rui-icon {
+        stroke: $color_dark_7;
+    }
+    &.rui-widget-chart .rui-widget-subtitle {
+        color: $color_dark_7;
+    }
+}

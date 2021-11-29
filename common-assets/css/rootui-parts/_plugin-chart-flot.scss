@@ -1,0 +1,26 @@
+.flot-svg .flot-x-axis,
+.flot-svg .flot-y-axis {
+    font-family: $font_body;
+    font-size: 12px;
+    fill: $color_grey_5;
+}
+.flot-line,
+.flot-bar,
+.flot-pie,
+.flot-realtime {
+    min-height: 320px;
+}
+
+.flot-pie {
+    .flot-overlay:hover ~ .pieLabel {
+        opacity: 1;
+    }
+    .pieLabel {
+        opacity: 0;
+        transition: opacity .1s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

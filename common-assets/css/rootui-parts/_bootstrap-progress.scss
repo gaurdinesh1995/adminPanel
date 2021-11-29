@@ -1,0 +1,19 @@
+.progress {
+    height: 1.231rem;
+    background-color: $color_grey_2;
+}
+.progress-sm {
+    height: 1rem;
+    border-radius: .2rem;
+}
+.progress-bar {
+    background-size: 2rem 2rem;
+}
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 2rem 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}

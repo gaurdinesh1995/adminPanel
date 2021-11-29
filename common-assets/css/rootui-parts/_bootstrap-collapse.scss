@@ -1,0 +1,28 @@
+.accordion-group {
+    + .accordion-group {
+        margin-top: 10px;
+    }
+}
+.collapse-link {
+    display: block;
+    padding: 14px 20px;
+    color: $color_secondary;
+    background-color: $color_grey_1;
+    border-radius: .25rem;
+
+    &:hover,
+    &.hover {
+        color: $color_text_1;
+        text-decoration: none;
+    }
+    &:focus,
+    &.focus {
+        outline: none;
+    }
+    &:not(.collapsed) {
+        color: $color_text_1;
+    }
+}
+.collapse-content {
+    padding: 25px 20px 15px;
+}

@@ -1,0 +1,7 @@
+@import "../../../common-assets/css/variables";
+@import "../../../common-assets/css/rootui-parts/plugin-quill";
+
+.rui-quill .ql-container {
+  border-color: $color_grey_2;
+  border-top: 0;
+}

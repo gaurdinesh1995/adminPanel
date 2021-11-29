@@ -1,0 +1,130 @@
+/**
+ * Base
+ */
+.yaybar {
+    position: fixed;
+    top: $sidebar_top_offset;
+    bottom: 0;
+    left: 0;
+    width: $sidebar_width;
+    overflow: auto;
+    font-size: $sidebar_font_size;
+    background-color: $sidebar_background;
+    transition: transform $sidebar_toggle_transition, width $sidebar_toggle_transition;
+    will-change: transform, width;
+    z-index: $z_sidebar;
+
+    // static position
+    &.yay-static {
+        position: absolute;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    .yay-icon {
+        margin-right: 10px;
+    }
+
+    .yaybar-wrap > ul {
+        width: $sidebar_width;
+        transition: width $sidebar_toggle_transition;
+        will-change: width;
+
+        li {
+            // label item
+            &.yay-label {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: $text_color;
+                opacity: .5;
+            }
+
+            // content item
+            &.yay-content {
+                padding: 10px;
+                color: $text_color;
+
+                .progress {
+                    margin-top: .7em;
+                }
+            }
+
+            // submenu hide and show
+            > .yay-submenu {
+                display: none;
+                transition: .3s background-color;
+                will-change: background-color;
+            }
+            &.yay-submenu-open > .yay-submenu {
+                display: block;
+            }
+
+            // items
+            > a {
+                display: flex;
+                align-items: center;
+                padding: $items_vertical_padding $items_horizontal_padding;
+                line-height: 20px;
+                color: $text_color;
+                text-decoration: none;
+                cursor: pointer;
+                background: none;
+                border-bottom: none;
+                transition: background-color .3s, font-size 0s, .3s color;
+                will-change: background-color, font-size, color;
+
+                // collapse icon
+                > .yay-icon-collapse {
+                    margin-left: auto;
+                    transition: transform .3s ease;
+                    will-change: transform;
+                }
+
+                // badges
+                > .badge {
+                    margin-left: auto;
+                }
+            }
+            &.yay-label,
+            &.yay-content, {
+                padding: $items_vertical_padding $items_horizontal_padding;
+            }
+
+            &:hover > a {
+                color: $hover_text_color;
+            }
+
+            &.yay-item-active > a,
+            &.yay-submenu-open > a {
+                color: $active_text_color;
+            }
+
+            &.yay-submenu-open > a > .yay-icon-collapse {
+                transform: rotate(90deg);
+            }
+
+            // submenu links color
+            .yay-submenu li {
+                a {
+                    color: $dropdown_text_color;
+                }
+
+                &:hover > a {
+                    color: $dropdown_hover_text_color;
+                }
+
+                &.yay-submenu-open > a,
+                &.yay-item-active > a {
+                    color: $active_text_color;
+                }
+            }
+        }
+
+        /* Submenu levels */
+        @include sidebarLevels(1, 3, $dropdown_backgrounds);
+    }
+}

@@ -1,0 +1,33 @@
+.rui-filemanager {
+    .rui-filemanager-table {
+        thead th {
+            color: $color_dark_6;
+
+            &.sorting_asc,
+            &.sorting_desc {
+                color: $color_secondary;
+            }
+        }
+    }
+}
+.rui-filemanager-head {
+    border-top-color: $color_dark_3;
+    border-bottom-color: $color_dark_3;
+}
+.rui-filemanager-file {
+    background-color: $color_dark_2;
+}
+.rui-filemanager-file-link {
+    color: $color_text_2;
+
+    &:hover {
+        color: $color_text_2;
+    }
+}
+.rui-filemanager-file-icon {
+    color: $color_dark_6;
+
+    &:hover {
+        color: $color_text_2;
+    }
+}

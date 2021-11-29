@@ -1,0 +1,24 @@
+.rui-box-window {
+    .rui-box-window-bar {
+        background-color: $color_dark_2;
+
+        > span {
+            background-color: $color_dark_3;
+        }
+        @each $name, $color in $colors_alerts {
+            .rui-box-window-#{$name} {
+                background-color: $color;
+            }
+        }
+    }
+    .rui-box-window-image {
+        border-color: $color_dark_2;
+    }
+
+    &:hover,
+    &.hover {
+        .rui-box-window-image {
+            box-shadow: 0 3px 10px $color_dropdown_shadow;
+        }
+    }
+}

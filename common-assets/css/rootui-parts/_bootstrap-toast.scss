@@ -1,0 +1,93 @@
+.toast {
+    border-color: $color_separator;
+    border-left: 2px solid $color_brand;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .03);
+}
+.toast-date {
+    margin-left: 20px;
+    color: $color_grey_5;
+}
+.toast-close {
+    color: $color_grey_5;
+    transition: color .1s ease-in-out;
+
+    &:hover {
+        color: $color_text_1;
+    }
+}
+.toast-header {
+    padding: 16px 20px;
+    border: 0;
+
+    + .toast-body {
+        padding-top: 0;
+        margin-top: -4px;
+    }
+}
+.toast-body {
+    padding: 16px 20px;
+}
+
+.rui-toast.hide {
+    display: none;
+}
+.rui-toast-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 46px;
+    right: 0;
+    margin: 30px 30px 10px;
+    z-index: 1000;
+
+    .rui-toast {
+        visibility: hidden;
+        background-color: #fff;
+        opacity: 0;
+        transition: opacity .25s ease-in-out, visibility .25s ease-in-out, transform .25s ease-in-out;
+        transform: translateX(20px);
+
+        @include media-breakpoint-down(xs) {
+            max-width: 300px;
+        }
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        &.hide {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    // move to bottom on small screens.
+    @include media-breakpoint-only(sm) {
+        top: auto;
+        bottom: 20px;
+
+        .rui-toast {
+            max-width: 400px;
+        }
+    }
+    @include media-breakpoint-only(xs) {
+        top: auto;
+        bottom: 10px;
+        left: 0;
+        margin: 20px 20px 10px;
+        z-index: 1010;
+
+        .rui-toast {
+            max-width: none;
+        }
+    }
+}
+
+// Colors.
+@each $name, $color in $colors_toasts {
+    .toast-#{$name} {
+        border-left-color: $color;
+    }
+}

@@ -1,0 +1,24 @@
+// stylelint-disable declaration-no-important
+
+// Border
+.border {
+    border-color: $color_dark_3 !important;
+}
+
+/*
+ * Text Color Helper
+ */
+@each $name, $color in $colors_main {
+    .text-#{$name} {
+        color: $color !important;
+    }
+}
+
+/*
+ * Bg Color Helper
+ */
+@each $name, $color in $colors_main {
+    .bg-#{$name} {
+        background-color: $color !important;
+    }
+}

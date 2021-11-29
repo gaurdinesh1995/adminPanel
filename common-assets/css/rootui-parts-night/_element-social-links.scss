@@ -1,0 +1,23 @@
+.rui-social-links > li {
+    > a,
+    > span,
+    > div {
+        &,
+        &:focus,
+        &:active {
+            color: $color_text_1;
+        }
+    }
+    @each $name, $color in $colors_social {
+        > .rui-social-#{$name} {
+            color: $color_text_1;
+            background-color: $color;
+
+            &:hover,
+            &.hover {
+                color: $color_text_1;
+                background-color: darken($color, 5%);
+            }
+        }
+    }
+}

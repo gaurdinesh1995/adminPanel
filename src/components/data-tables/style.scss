@@ -1,0 +1,7 @@
+@import "../../../common-assets/css/variables";
+@import "../../../common-assets/css/rootui-parts/plugin-datatable";
+@import "~datatables/media/css/jquery.dataTables.min.css";
+
+table.dataTable.no-footer.rui-datatable {
+  border-bottom: none;
+}

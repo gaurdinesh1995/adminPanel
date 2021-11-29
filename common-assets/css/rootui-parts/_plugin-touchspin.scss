@@ -1,0 +1,111 @@
+.rui-touchspin {
+    .form-control {
+        margin-right: 10px;
+    }
+    .input-group-prepend {
+        margin-right: 10px;
+    }
+    .bootstrap-touchspin {
+        .form-control {
+            border-radius: .25rem;
+        }
+        .btn {
+            justify-content: center;
+            align-items: center;
+            min-width: 38px;
+            border-radius: .25rem;
+        }
+        .btn-default {
+            color: $color_secondary;
+            background-color: $color_grey_2;
+
+            &:hover {
+                background-color: darken($color_grey_2, 3);
+            }
+            &:active {
+                background-color: darken($color_grey_2, 6);
+            }
+        }
+    }
+}
+// Additional classes
+// Btns right
+.rui-touchspin-right {
+    .form-control {
+        order: 0;
+        margin-right: 10px;
+    }
+    .input-group-prepend {
+        order: 1;
+        margin-right: 10px;
+    }
+    .input-group-append {
+        order: 2;
+    }
+}
+// Btns left
+.rui-touchspin-left {
+    .form-control {
+        order: 2;
+        margin-right: 0;
+    }
+    .input-group-prepend {
+        order: 0;
+        margin-right: 10px;
+    }
+    .input-group-append {
+        order: 1;
+        margin-right: 10px;
+    }
+}
+// Btns Vertical
+.rui-touchspin-vertical {
+    .input-group-btn-vertical {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .btn {
+            min-width: 17px;
+            height: 17px;
+            padding: 0;
+            line-height: 0;
+            border-radius: .2rem;
+        }
+    }
+
+    &.rui-touchspin-left {
+        .form-control {
+            order: 1;
+            margin-right: 0;
+        }
+        .input-group-btn-vertical {
+            order: 0;
+            margin-right: 10px;
+        }
+    }
+}
+// Btns Overlay
+.rui-touchspin-overlay {
+    .form-control {
+        margin-right: 0;
+    }
+    .input-group-btn-vertical {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin-left: -18px;
+        z-index: 4;
+
+        .btn {
+            &:first-of-type {
+                border-radius: 0 .2rem 0 0;
+            }
+            &:last-of-type {
+                border-radius: 0 0 .2rem 0;
+            }
+        }
+    }
+}

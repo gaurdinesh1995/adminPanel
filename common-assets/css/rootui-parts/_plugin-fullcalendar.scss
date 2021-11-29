@@ -1,0 +1,322 @@
+.rui-calendar .fc-event,
+.fc-event-list .fc-event {
+    padding: 4px 10px 6px;
+    margin: 5px 5px 0;
+    color: $color_secondary;
+    background-color: #fff;
+    border: 1px solid $color_grey_4;
+    border-left-width: 2px;
+    border-radius: .2rem;
+    transition: border-color .1s ease-in-out;
+
+    .fc-daygrid-event-dot {
+        display: none;
+    }
+
+    .fc-content {
+        .fc-title {
+            font-size: 12px;
+            color: $color_secondary;
+            transition: color .1s ease-in-out;
+        }
+        .fc-time {
+            display: inline-block;
+            min-width: 20px;
+            margin-right: 5px;
+            font-size: 12px;
+            font-weight: 400;
+            color: $color_text_1;
+        }
+    }
+
+    &:hover {
+        border-color: $color_grey_4;
+
+        .fc-content .fc-title {
+            color: $color_text_1;
+        }
+    }
+
+    @each $name, $color in $colors_alerts {
+        &.fc-event-#{$name} {
+            border-left-color: $color;
+        }
+    }
+}
+.fc-event-list .fc-event {
+    margin-right: 0;
+    margin-left: 0;
+}
+.rui-calendar {
+    --fc-today-bg-color: #{$color_grey_1};
+    --fc-border-color: #{$color_separator};
+
+    tr:first-child > td > .fc-day-grid-event {
+        margin-top: 13px;
+    }
+    .fc-scrollgrid {
+        border-radius: .25rem;
+    }
+    .fc-toolbar {
+        h2 {
+            margin-top: 10px;
+            font-size: 1.29rem;
+        }
+        &.fc-header-toolbar {
+            margin-bottom: 20px;
+        }
+        .fc-button {
+            display: inline-flex;
+            height: auto;
+            padding: 10px 15px;
+            font-size: 11px;
+            font-weight: 700;
+            color: $color_secondary;
+            text-transform: uppercase;
+            background: none;
+            background-color: $color_grey_1;
+            border: 0;
+            box-shadow: none;
+            transition: background-color .15s ease-in-out, color .15s ease-in-out;
+
+            > .rui-icon {
+                margin: 0 -5px;
+            }
+
+            &:hover,
+            &.fc-button-active {
+                color: $color_text_1;
+                background-color: $color_grey_3;
+            }
+        }
+
+        @include media-breakpoint-down(xs) {
+            display: flex;
+            flex-direction: column;
+
+            .fc-center {
+                order: 0;
+                margin-bottom: 10px;
+            }
+            .fc-left {
+                order: 1;
+                margin-bottom: 10px;
+            }
+            .fc-right {
+                order: 2;
+            }
+        }
+    }
+    a.fc-more,
+    a.fc-more:not([href]):not([tabindex]) {
+        display: block;
+        margin-top: 13px;
+        font-size: 12px;
+        color: $color_grey_5;
+        text-align: center;
+
+        &:hover {
+            color: $color_secondary;
+        }
+    }
+    .fc-popover {
+        border-radius: .25rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .03);
+
+        .fc-header {
+            padding: 15px 20px;
+            background: none;
+
+            + .fc-body {
+                margin-top: -5px;
+
+                .fc-event-container {
+                    padding: 0 15px 20px;
+                }
+            }
+            .fc-title {
+                margin: 0;
+                color: $color_text_1;
+            }
+            .fc-close {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 16px;
+                height: 16px;
+                margin-top: 1px;
+                margin-right: -5px;
+                font-size: 9px;
+                color: $color_grey_5;
+                transition: color .15s ease-in-out;
+
+                &:hover {
+                    color: $color_text_1;
+                }
+            }
+        }
+    }
+    // Style Month
+    .fc-month-view,
+    .fc-dayGridMonth-view {
+        .fc-content-skeleton {
+            pointer-events: none;
+
+            .fc-day-grid-event,
+            .fc-more-cell > div > .fc-more {
+                pointer-events: visible;
+            }
+        }
+        td,
+        th {
+            transition: background-color .1s ease-in-out;
+        }
+        thead {
+            th {
+                padding: 15px;
+                font-weight: 600;
+
+                @include media-breakpoint-down(xs) {
+                    padding: 10px 15px;
+                }
+            }
+        }
+        .fc-scrollgrid-sync-table tbody,
+        tbody {
+            td > span {
+                display: block;
+                text-align: center;
+            }
+        }
+        .fc-daygrid-day-number {
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 3px;
+            color: $color_secondary;
+        }
+    }
+    // Style Agenda Day
+    .fc-agenda-view,
+    .fc-timeGridDay-view {
+        > table {
+            width: calc(100% + 1px);
+        }
+        thead {
+            th,
+            .fc-row {
+                border-color: transparent;
+            }
+            .fc-day-header {
+                padding: 15px 0;
+                font-weight: 600;
+
+                @include media-breakpoint-down(xs) {
+                    padding: 10px 0;
+                }
+            }
+        }
+        tbody {
+            > tr > td {
+                border: 0;
+            }
+            td,
+            .fc-event {
+                margin: 5px;
+            }
+        }
+        .fc-widget-content {
+            height: 18px;
+        }
+        .fc-day-grid {
+            .fc-row {
+                min-height: 47px;
+                border-right-color: transparent;
+            }
+        }
+        .fc-bg .fc-axis {
+            padding-top: 8px;
+            vertical-align: top;
+        }
+        .fc-bg,
+        .fc-slats {
+            .fc-axis {
+                font-size: 13px;
+                color: $color_grey_5;
+            }
+        }
+        .fc-event {
+            padding: 7px 10px 8px;
+
+            .fc-content .fc-time {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+        }
+        .fc-divider {
+            display: none;
+        }
+        td.fc-today {
+            background-color: #fff;
+        }
+    }
+    // Style List
+    .fc-list {
+        --fc-list-event-hover-bg-color: transparent;
+        --fc-neutral-bg-color: transparent;
+
+        padding: 0 0 0 25px;
+
+        .fc-scroller {
+            padding: 0 30px 30px 0;
+        }
+
+        .fc-list-empty {
+            background-color: #fff;
+        }
+        .fc-list-heading .fc-widget-header {
+            padding: 45px 0 18px;
+            background: none;
+            border-color: transparent;
+        }
+        .fc-list-heading:first-child .fc-widget-header {
+            padding: 24px 0 18px;
+        }
+        .fc-list-day-cushion {
+            margin-top: 25px;
+        }
+        .fc-list-day > th,
+        .fc-list-event > td {
+            --fc-border-color: transparent;
+        }
+        .fc-list-event {
+            + .fc-list-event > td {
+                padding-top: 18px;
+            }
+            @each $name, $color in $colors_alerts {
+                &.fc-event-#{$name} .fc-list-event-dot {
+                    border-color: $color;
+                }
+            }
+            .fc-list-event-time {
+                color: $color_grey_5;
+            }
+            .fc-list-event-title {
+                color: $color_secondary;
+                transition: color .1s ease-in-out;
+            }
+            .fc-list-event-marker {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            .fc-list-event-dot {
+                // width: 6px;
+                // height: 6px;
+                // margin-bottom: 2px;
+                // background-color: $color_grey_2;
+            }
+            &:hover .fc-list-event-title {
+                color: $color_text_1;
+            }
+        }
+    }
+}

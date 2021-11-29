@@ -1,0 +1,89 @@
+.rui-messenger {
+    background-color: $color_dark_1;
+
+    // Full
+    &.rui-messenger-full {
+        border-color: $color_dark_3;
+
+        .rui-messenger-head {
+            border-bottom-color: $color_dark_3;
+
+            @include media-breakpoint-down(xs) {
+                border-color: $color_dark_3;
+            }
+        }
+        .rui-messenger-list {
+            border-right-color: $color_dark_3;
+        }
+        > .rui-messenger-footer {
+            border-top-color: $color_dark_3;
+
+            @include media-breakpoint-down(xs) {
+                border-color: $color_dark_3;
+            }
+        }
+        .rui-messenger-chat .rui-messenger-footer {
+            border-top-color: $color_dark_3;
+
+            @include media-breakpoint-down(xs) {
+                border-color: $color_dark_3;
+            }
+        }
+        @include media-breakpoint-down(lg) {
+            .media.media-filled.active > .rui-messenger-item {
+                background-color: transparent;
+            }
+        }
+    }
+
+    // Chat
+    .rui-messenger-chat {
+        background-color: $color_dark_1;
+
+        // Datetime
+        .rui-messenger-message-datetime {
+            color: $color_dark_5;
+        }
+
+        // Message
+        .rui-messenger-message {
+            > ul {
+                color: $color_text_1;
+                background-color: rgba($color_brand, .8);
+            }
+
+            // Time
+            .rui-messenger-message-time {
+                color: $color_dark_5;
+            }
+
+            // Edit btns
+            .rui-messenger-message-edit > .btn {
+                color: $color_dark_5;
+
+                &:hover,
+                &.hover {
+                    color: $color_text_1;
+                }
+            }
+            // Incoming
+            &.rui-messenger-message-incoming > ul {
+                color: $color_text_2;
+                background-color: $color_dark_2;
+            }
+        }
+    }
+
+    // Collapse
+    .rui-messenger-collapse {
+        padding-bottom: 15px;
+    }
+    .rui-messenger-collapse-btn {
+        color: $color_dark_5;
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+        }
+    }
+}

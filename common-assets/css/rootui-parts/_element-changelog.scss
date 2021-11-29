@@ -1,0 +1,80 @@
+.rui-changelog {
+    > ul {
+        margin-bottom: 20px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        > li {
+            padding: 4px 0;
+
+            &:first-child {
+                padding-top: 0;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+    .rui-changelog-title {
+        margin-bottom: 0;
+    }
+    .rui-changelog-subtitle {
+        margin-top: 5px;
+        margin-bottom: 20px;
+        color: $color_grey_6;
+
+        a {
+            color: $color_secondary;
+
+            &:hover,
+            &.hover {
+                color: $color_text_1;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .rui-changelog-item {
+        position: relative;
+        padding-left: 12px;
+        color: $color_text_2;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            top: 2px;
+            left: 0;
+            width: 2px;
+            height: 16px;
+            background-color: $color_grey_4;
+        }
+
+        .rui-changelog-item-type {
+            margin-right: 4px;
+            color: $color_text_2;
+        }
+    }
+    @each $name, $color in $colors_alerts {
+        .rui-changelog-#{$name}::before {
+            background-color: $color;
+        }
+    }
+
+    .rui-changelog-file {
+        display: flex;
+        align-items: center;
+        color: $color_secondary;
+
+        > .rui-icon {
+            margin-right: 10px;
+        }
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+            text-decoration: none;
+        }
+    }
+}

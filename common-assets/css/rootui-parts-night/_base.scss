@@ -1,0 +1,19 @@
+body {
+    background-color: $color_dark_1;
+}
+
+// Main Content
+.rui-page {
+    .rui-page-sidebar {
+        border-left-color: $color_dark_3;
+
+        > .nav {
+            background-color: $color_dark_1;
+        }
+    }
+}
+
+// Separetor
+.rui-separator {
+    border-bottom-color: $color_dark_3;
+}

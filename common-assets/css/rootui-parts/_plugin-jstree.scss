@@ -1,0 +1,113 @@
+.rui-jstree {
+    .jstree-icon:not(.jstree-ocl) {
+        display: none;
+    }
+    .jstree-ocl,
+    .jstree-node {
+        background: none;
+    }
+    .jstree-ocl {
+        position: relative;
+        margin-right: -24px;
+        cursor: pointer;
+        z-index: 1;
+
+        &:hover + .jstree-anchor > .rui-icon {
+            stroke: $color_text_1;
+        }
+    }
+    .jstree-node {
+        margin-left: 30px;
+
+        &.jstree-open {
+            > .jstree-anchor > .rui-jstree-icon-open {
+                opacity: 0;
+            }
+            > .jstree-anchor > .rui-jstree-icon-close {
+                opacity: 1;
+            }
+        }
+        &.jstree-closed {
+            > .jstree-anchor > .rui-jstree-icon-open {
+                opacity: 1;
+            }
+            > .jstree-anchor > .rui-jstree-icon-close {
+                opacity: 0;
+            }
+        }
+    }
+    .rui-jstree-icon {
+        transition: opacity .15s ease-in-out;
+    }
+    .rui-jstree-icon-open {
+        opacity: 1;
+    }
+    .rui-jstree-icon-close {
+        position: absolute;
+        opacity: 0;
+    }
+    .jstree-anchor {
+        display: inline-flex;
+        align-items: center;
+
+        + .jstree-children {
+            padding-top: 5px;
+        }
+
+        &.jstree-clicked,
+        &.jstree-hovered {
+            background: none;
+            box-shadow: none;
+        }
+
+        > .rui-icon {
+            margin-right: 14px;
+            stroke: $color_grey_5;
+            transition: stroke .1s ease-in-out;
+        }
+        &:hover {
+            background: none;
+            box-shadow: none;
+
+            > .rui-icon {
+                stroke: $color_text_1;
+            }
+        }
+    }
+    .jstree-open {
+        > .jstree-ocl:hover + .jstree-anchor > .rui-icon {
+            stroke: $color_brand;
+        }
+        > .jstree-anchor {
+            color: $color_brand;
+
+            > .rui-icon {
+                stroke: $color_brand;
+            }
+        }
+    }
+    .jstree-children {
+        .jstree-node + .jstree-node {
+            padding-top: 5px;
+        }
+    }
+}
+.rui-jstree-lines .jstree-children .jstree-children .jstree-node {
+    position: relative;
+
+    + .jstree-node::before {
+        top: -12px;
+        height: 29px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: -21px;
+        width: 10px;
+        height: 10px;
+        border-bottom: 1px solid $color_separator;
+        border-left: 1px solid $color_separator;
+    }
+}

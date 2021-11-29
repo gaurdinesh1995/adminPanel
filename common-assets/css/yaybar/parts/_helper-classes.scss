@@ -1,0 +1,22 @@
+body {
+    position: relative;
+}
+
+// Body overflow used in Push effect
+.yay-html-overflow,
+.yay-html-overflow body {
+    overflow-x: hidden;
+}
+
+// Yay icon
+.yay-icon,
+.yay-icon-collapse {
+    display: inline-flex;
+    align-self: center;
+
+    svg {
+        display: inline-flex;
+        width: 16px;
+        height: 16px;
+    }
+}

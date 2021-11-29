@@ -1,0 +1,23 @@
+/**
+ * OverlayScrollbars
+ */
+.yaybar:not(.os-host) {
+    overflow: hidden;
+}
+.yaybar .os-scrollbar {
+    background-color: $sidebar_background;
+
+    > .os-scrollbar-track > .os-scrollbar-handle,
+    &:hover > .os-scrollbar-track > .os-scrollbar-handle {
+        background-color: $scroll_background;
+    }
+    > .os-scrollbar-track {
+        background-color: $scroll_bar_background;
+    }
+    &.os-scrollbar-vertical {
+        width: $scroll_width;
+    }
+    &.os-scrollbar-horizontal {
+        height: $scroll_width;
+    }
+}

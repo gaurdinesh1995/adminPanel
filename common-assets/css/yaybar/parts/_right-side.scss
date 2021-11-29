@@ -1,0 +1,63 @@
+/*
+ * Right side
+ */
+.yaybar.yay-right-side {
+    right: 0;
+    left: auto;
+
+    // hide
+    .yay-hide & {
+        transform: translateX($sidebar_width);
+    }
+
+    .yay-hide &.yay-hide-to-small {
+        transform: translateX(0);
+    }
+
+    // show submenu to left
+    .yay-hide &.yay-hide-to-small .yaybar-wrap > ul > li > .yay-submenu {
+        right: 100%;
+        left: auto;
+    }
+
+    // content position
+    &.yay-overlay ~ .content-wrap {
+        margin-right: 0;
+    }
+
+    .yay-hide &.yay-hide-to-small ~ .content-wrap,
+    &.yay-overlay.yay-hide-to-small ~ .content-wrap {
+        transform: translateX($sidebar_small_width);
+    }
+
+    /* Show with Push content */
+    &.yay-push ~ .content-wrap {
+        margin-left: 0;
+        transition: transform $sidebar_toggle_transition, margin-right $sidebar_toggle_transition;
+        transform: translateX(-$sidebar_width);
+        will-change: transform, margin-right;
+    }
+
+    .yay-hide &.yay-push ~ .content-wrap {
+        transform: translateX(0);
+    }
+
+    /* Show with Shrink content */
+    &.yay-shrink ~ .content-wrap {
+        margin-right: $sidebar_width;
+        margin-left: 0;
+        transition: margin-right $sidebar_toggle_transition;
+        transform: none;
+        will-change: margin-right;
+    }
+
+    .yay-hide &.yay-shrink ~ .content-wrap {
+        margin-right: 0;
+        margin-left: 0;
+        transform: none;
+    }
+
+    .yay-hide &.yay-shrink.yay-hide-to-small ~ .content-wrap {
+        margin-right: $sidebar_small_width;
+    }
+}

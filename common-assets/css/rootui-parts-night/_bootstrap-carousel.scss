@@ -1,0 +1,17 @@
+.carousel-light {
+    .carousel-control-prev,
+    .carousel-control-next {
+        color: $color_dark_6;
+
+        &:hover,
+        &.hover {
+            color: $color_secondary;
+        }
+    }
+    .carousel-indicators li {
+        background-color: $color_dark_6;
+    }
+    .carousel-caption {
+        color: $color_dark_6;
+    }
+}

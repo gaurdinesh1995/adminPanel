@@ -1,0 +1,38 @@
+.rui-jqvmap {
+    width: 100%;
+    min-height: 389px;
+    border-radius: .25rem;
+
+    @include media-breakpoint-down(sm) {
+        min-height: 300px;
+    }
+
+    .jqvmap-zoomin,
+    .jqvmap-zoomout {
+        top: 15px;
+        left: 15px;
+        width: 24px;
+        height: 24px;
+        line-height: 18px;
+        color: $color_secondary;
+        background-color: $color_grey_3;
+        transition: color .1s ease-in-out, background-color .1s ease-in-out;
+
+        &:hover {
+            color: $color_text_1;
+            background-color: $color_grey_4;
+        }
+    }
+    .jqvmap-zoomout {
+        top: 45px;
+    }
+    .jqvmap-region {
+        transition: fill .1s ease-in-out;
+    }
+}
+.jqvmap-label {
+    padding: 1px 5px;
+    background-color: $color_dark;
+    border-radius: .2rem;
+    z-index: 3;
+}

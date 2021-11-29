@@ -1,0 +1,11 @@
+.rui-spotlightmode {
+    .rui-navbar,
+    .rui-yaybar {
+        opacity: 0;
+
+        &:hover,
+        &.hover {
+            opacity: 1;
+        }
+    }
+}

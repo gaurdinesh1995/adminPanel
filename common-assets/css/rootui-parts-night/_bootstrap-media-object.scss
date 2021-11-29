@@ -1,0 +1,56 @@
+.media {
+    &.media-filled {
+        &:hover,
+        &.hover,
+        &.active {
+            > .media-link {
+                background-color: $color_dark_2;
+
+                > .media-img {
+                    color: $color_dark_6;
+                    background-color: $color_dark_3;
+                }
+            }
+        }
+    }
+
+    @each $name, $color in $colors_alerts {
+        &.media-#{$name}::before {
+            background-color: $color;
+            box-shadow: 0 0 0 2px $color_dark_1;
+        }
+    }
+
+    > .media-icon {
+        color: $color_dark_5;
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+        }
+    }
+
+    .media-img {
+        color: $color_dark_5;
+        background-color: $color_dark_2;
+    }
+    .media-title {
+        color: $color_text_1;
+    }
+    .media-time {
+        color: $color_dark_5;
+    }
+    .media-subtitle {
+        color: $color_dark_7;
+    }
+
+    &:hover > .media-img,
+    &.hover > .media-img,
+    &:hover > .media-link > .media-img,
+    &.hover > .media-link > .media-img,
+    > .media-link:hover > .media-img,
+    > .media-link.hover > .media-img {
+        color: $color_dark_6;
+        background-color: $color_dark_3;
+    }
+}

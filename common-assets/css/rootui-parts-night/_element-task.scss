@@ -1,0 +1,87 @@
+.rui-task {
+    &:hover,
+    &.hover {
+        background-color: $color_dark_2;
+    }
+    .rui-task-title {
+        color: $color_secondary;
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+        }
+    }
+    .rui-task-subtitle {
+        color: $color_dark_7;
+
+        > a {
+            color: $color_secondary;
+
+            &:hover,
+            &.hover {
+                color: $color_text_1;
+            }
+        }
+    }
+    .rui-task-icon {
+        color: $color_dark_6;
+
+        &:not([href]):hover,
+        &:not([href]).hover {
+            color: $color_dark_6;
+        }
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+        }
+    }
+    @each $name, $color in $colors_alerts {
+        &.rui-task-#{$name} > .rui-task-icon:first-child {
+            color: $color;
+        }
+    }
+}
+
+.rui-task-status {
+    color: $color_dark_7;
+
+    a {
+        color: $color_secondary;
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+        }
+    }
+
+    @each $name, $color in $colors_alerts {
+        &.rui-task-status-#{$name} .rui-task-status-item-icon {
+            color: $color_text_1;
+            background-color: $color;
+        }
+    }
+
+    .rui-task-status-item-icon {
+        color: $color_secondary;
+        background-color: $color_dark_2;
+    }
+}
+
+.rui-task-comment {
+    border-color: $color_dark_3;
+}
+
+.rui-task-sidebar {
+    a {
+        color: $color_secondary;
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+        }
+    }
+    .rui-task-sidebar-list > li {
+        color: $color_dark_7;
+    }
+}

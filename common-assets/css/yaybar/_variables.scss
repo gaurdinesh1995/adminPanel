@@ -1,0 +1,33 @@
+$sidebar_width: 260px !default;
+$sidebar_top_offset: 56px !default;
+$sidebar_small_width: 60px !default;
+$sidebar_font_size: 13px !default;
+$dropdown_offset: 17px !default;
+$items_vertical_padding: 12px !default;
+$items_horizontal_padding: 17px !default;
+$scroll_width: 7px !default;
+$sidebar_toggle_transition: 250ms ease-in-out !default;
+
+// Colors
+$text_color: #a4a2ab !default;
+$hover_text_color: #fff !default;
+$sidebar_background: #333244 !default;
+
+$active_text_color: #fff !default;
+
+$dropdown_text_color: #a4a2ab !default;
+$dropdown_hover_text_color: #fff !default;
+$dropdown_backgrounds:
+    darken($sidebar_background, 4),
+    darken($sidebar_background, 8),
+    darken($sidebar_background, 12),
+    darken($sidebar_background, 16) !default;
+
+$content_overlay_color: rgba(#28282d, .8) !default;
+
+$scroll_background: #2377ba !default;
+$scroll_bar_background: rgba(0, 0, 0, .25) !default;
+
+// z indexes
+$z_sidebar: 100 !default;
+$z_content_overlay: 10 !default;

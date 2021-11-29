@@ -1,0 +1,156 @@
+.rui-calendar .fc-event,
+.fc-event-list .fc-event {
+    color: $color_secondary;
+    background-color: $color_dark_1;
+    border-color: $color_dark_3;
+    border-left-color: $color_dark_4;
+
+    .fc-bg {
+        background-color: $color_dark_1;
+    }
+
+    .fc-content {
+        .fc-title {
+            color: $color_secondary;
+        }
+        .fc-time {
+            color: $color_text_1;
+        }
+    }
+
+    &:hover {
+        border-color: $color_dark_4;
+
+        .fc-content .fc-title {
+            color: $color_text_1;
+        }
+    }
+
+    @each $name, $color in $colors_alerts {
+        &.fc-event-#{$name} {
+            border-left-color: $color;
+        }
+    }
+}
+.rui-calendar {
+    .fc-view {
+        border-color: $color_dark_3;
+    }
+    .fc-toolbar {
+        .fc-button {
+            color: $color_secondary;
+            background-color: $color_dark_2;
+
+            &:hover,
+            &.fc-state-active {
+                color: $color_text_1;
+                background-color: $color_dark_3;
+            }
+        }
+    }
+    a.fc-more,
+    a.fc-more:not([href]):not([tabindex]) {
+        color: $color_dark_6;
+
+        &:hover {
+            color: $color_secondary;
+        }
+    }
+    .fc-popover {
+        background-color: $color_dropdown_bg;
+        border-color: $color_dropdown_border;
+        box-shadow: 0 3px 10px $color_dropdown_shadow;
+
+        .fc-header {
+            .fc-title {
+                color: $color_text_1;
+            }
+            .fc-close {
+                color: $color_dark_6;
+
+                &:hover {
+                    color: $color_text_1;
+                }
+            }
+        }
+    }
+    // Style Month
+    .fc-month-view {
+        .fc-head > tr > td {
+            border-bottom-color: $color_dark_3;
+        }
+        td,
+        th {
+            border-color: $color_dark_3;
+        }
+        .fc-day-number {
+            color: $color_secondary;
+        }
+        .fc-bg td {
+            &:hover,
+            &.fc-today {
+                background-color: $color_dark_2;
+            }
+        }
+    }
+    // Style Agenda Day
+    .fc-agenda-view {
+        .fc-head > tr > td {
+            border-bottom-color: $color_dark_3;
+        }
+        .fc-body td,
+        .fc-body .fc-row {
+            border-color: $color_dark_3;
+        }
+        .fc-day-grid {
+            border-bottom-color: $color_dark_3;
+
+            .fc-row {
+                border-right-color: transparent;
+            }
+        }
+        .fc-bg .fc-axis,
+        .fc-slats .fc-axis{
+            color: $color_dark_6;
+        }
+        .fc-divider {
+            display: none;
+        }
+        td.fc-today {
+            background-color: $color_dark_1;
+        }
+    }
+    // Style List
+    .fc-list-view {
+        .fc-list-empty {
+            background-color: $color_dark_1;
+        }
+        .fc-list-heading .fc-widget-header {
+            background: none;
+            border-color: transparent;
+        }
+        .fc-list-item {
+            @each $name, $color in $colors_alerts {
+                &.fc-event-#{$name} .fc-event-dot {
+                    background-color: $color;
+                }
+            }
+            .fc-list-item-time {
+                color: $color_dark_6;
+            }
+            .fc-list-item-title {
+                color: $color_secondary;
+            }
+            .fc-event-dot {
+                background-color: $color_dark_3;
+            }
+            > td {
+                background-color: transparent;
+                border-color: transparent;
+            }
+            &:hover .fc-list-item-title {
+                color: $color_text_1;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.rui-jqvmap .jqvmap-zoomin,
+.rui-jqvmap .jqvmap-zoomout {
+    color: $color_secondary;
+    background-color: $color_dark_4;
+
+    &:hover {
+        color: $color_text_1;
+        background-color: $color_dark_5;
+    }
+}

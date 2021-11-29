@@ -1,0 +1,338 @@
+/* Placeholders */
+::placeholder,
+.form-control::placeholder {
+    color: $color_grey_6;
+    opacity: 1;
+    will-change: opacity;
+    transition: opacity .15s ease-in-out;
+}
+
+/* Remove outline from focused buttons */
+button:focus {
+    outline: 0;
+}
+
+// Form Control
+.form-control {
+    min-height: 36px;
+    padding: 7.5px 17px 9px;
+    background-color: lighten($color_grey_1, 1);
+    border-color: $color_separator;
+
+    &:focus,
+    &.focus {
+        background-color: lighten($color_grey_1, 1);
+        border-color: rgba($color_brand, .6);
+        box-shadow: 0 0 0 .2rem rgba($color_brand, .2);
+    }
+    &:disabled {
+        background-color: $color_grey_2;
+        border-color: $color_separator;
+    }
+}
+.form-control-clean {
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 0;
+
+    &::placeholder {
+        color: $color_grey_5;
+    }
+
+    &:hover,
+    &.hover {
+        color: $color_text_1;
+    }
+    &:focus,
+    &.focus {
+        background-color: transparent;
+        box-shadow: none;
+    }
+    &:not(.disabled):not(:disabled):active {
+        color: $color_text_1;
+    }
+}
+textarea.form-control {
+    height: 200px;
+    min-height: 44px;
+    max-height: 300px;
+    padding: 10px 19px 11px;
+}
+// Form Group
+.form-group {
+    margin-bottom: 20px;
+
+    .col-form-label {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+.row {
+    // margin-bottom: 0;
+
+    .col-form-label {
+        display: flex;
+        align-items: center;
+        padding-bottom: 0;
+    }
+}
+// Input Group
+.input-group {
+    .input-group-append,
+    .input-group-prepend {
+        align-items: center;
+        background-color: transparent;
+    }
+}
+.input-group-text {
+    min-height: 36px;
+    color: $color_secondary;
+    background-color: $color_grey_1;
+    border-color: $color_separator;
+
+    > .rui-icon {
+        min-width: 16px;
+    }
+}
+
+// Custom
+.custom-control {
+    padding-left: 2rem;
+}
+.custom-control-label {
+    &::before,
+    &::after {
+        top: .3rem;
+        left: -2rem;
+        width: calc(1rem + 3px);
+        height: calc(1rem + 3px);
+    }
+    &::before {
+        background-color: $color_grey_4;
+        border-color: $color_grey_4;
+    }
+}
+.custom-checkbox .custom-control-input,
+.custom-radio .custom-control-input,
+.custom-switch .custom-control-input {
+    &:not(:disabled):active ~ .custom-control-label::before {
+        background-color: lighten($color_brand, 30%);
+        border-color: lighten($color_brand, 30%);
+    }
+    &:checked ~ .custom-control-label::before {
+        background-color: $color_brand;
+        border-color: $color_brand;
+    }
+    &:focus ~ .custom-control-label::before {
+        box-shadow: none;
+    }
+    &:focus:not(:checked) ~ .custom-control-label::before {
+        border-color: $color_grey_4;
+        box-shadow: none;
+    }
+    &:disabled ~ .custom-control-label {
+        color: $color_grey_6;
+
+        &::before {
+            background-color: $color_grey_3;
+            border-color: $color_grey_3;
+        }
+    }
+}
+// Switches
+.custom-switch {
+    padding-left: calc(3rem - 2px);
+
+    .custom-control-label {
+        &::before {
+            left: calc(-3rem + 2px);
+            width: calc(2rem + 1px);
+            border-radius: 1rem;
+        }
+        &::after {
+            top: calc(.3rem + 1px);
+            left: calc(-3rem + 3px);
+            width: calc(1rem + 1px);
+            height: calc(1rem + 1px);
+            background-color: #fff;
+        }
+    }
+    .custom-control-input:checked ~ .custom-control-label::after {
+        transform: translateX(11px);
+    }
+}
+// Select
+.custom-select {
+    min-height: 36px;
+    padding: 7px 17px;
+    color: $color_text_2;
+    background-color: lighten($color_grey_1, 1);
+    background-position: calc(100% - 19px) 50%;
+    border-color: $color_separator;
+
+    &:focus,
+    &.focus {
+        background-color: lighten($color_grey_1, 1);
+        border-color: rgba($color_brand, .6);
+        box-shadow: 0 0 0 .2rem rgba($color_brand, .25);
+    }
+    &:disabled {
+        background-color: $color_grey_2;
+        border-color: $color_separator;
+    }
+}
+// Range
+.custom-range {
+    height: 20px;
+
+    &::-webkit-slider-runnable-track {
+        background-color: $color_grey_3;
+    }
+    &::-moz-range-track {
+        background-color: $color_grey_3;
+    }
+    &::-ms-track {
+        color: transparent;
+        background: none;
+        border: none;
+    }
+    &::-ms-fill-lower,
+    &::-ms-fill-upper {
+        background-color: $color_grey_2;
+    }
+
+    &::-webkit-slider-thumb {
+        width: 16px;
+        height: 16px;
+        margin-top: -4.5px;
+        background: $color_brand;
+        border: 0;
+        border-radius: 8px;
+
+        &:active {
+            background: lighten($color_brand, 30%);
+        }
+    }
+    &::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+        margin-top: -4.5px;
+        cursor: pointer;
+        background: $color_brand;
+        border: 0;
+        border-radius: 8px;
+
+        &:active {
+            background: lighten($color_brand, 30%);
+        }
+    }
+    &::-ms-thumb {
+        width: 16px;
+        height: 16px;
+        margin-top: 0;
+        cursor: pointer;
+        background-color: $color_brand;
+        border: 0;
+        border-radius: 8px;
+
+        &:active {
+            background-color: lighten($color_brand, 30%);
+        }
+    }
+    &:focus {
+        &::-webkit-slider-thumb {
+            box-shadow: 0 0 0 1px #fff, 0 0 0 .2rem rgba($color_brand, .25);
+        }
+        &::-moz-range-thumb {
+            box-shadow: 0 0 0 1px #fff, 0 0 0 .2rem rgba($color_brand, .25);
+        }
+        &::-ms-thumb {
+            box-shadow: 0 0 0 1px #fff, 0 0 0 .2rem rgba($color_brand, .25);
+        }
+    }
+}
+// Validation
+.was-validated .form-control:valid,
+.was-validated .custom-select:valid,
+.form-control.is-valid,
+.custom-select.is-valid {
+    background-color: lighten($color_success, 48%);
+    border-color: lighten($color_success, 25%);
+
+    &:focus {
+        border-color: lighten($color_success, 20%);
+        box-shadow: 0 0 0 .2rem rgba($color_success, .15);
+    }
+}
+.was-validated .form-control:invalid,
+.was-validated .custom-select:invalid,
+.form-control.is-invalid,
+.custom-select.is-invalid {
+    background-color: lighten($color_danger, 36%);
+    border-color: lighten($color_danger, 25%);
+
+    &:focus {
+        border-color: lighten($color_danger, 20%);
+        box-shadow: 0 0 0 .2rem rgba($color_danger, .15);
+    }
+}
+.was-validated .form-control:invalid,
+.was-validated .form-control:valid,
+.form-control.is-invalid,
+.form-control.is-valid {
+    background-image: none;
+}
+.was-validated .custom-select:valid,
+.was-validated .custom-select:invalid,
+.custom-select.is-valid,
+.custom-select.is-invalid {
+    background-position: calc(100% - 19px) 50%;
+    background-size: 8px 10px, 0 0;
+}
+.was-validated .custom-control-input:valid ~ .custom-control-label::before,
+.custom-control-input.is-valid ~ .custom-control-label::before {
+    background-color: lighten($color_success, 25%);
+    border-color: lighten($color_success, 25%);
+}
+.was-validated .custom-control-input:invalid ~ .custom-control-label::before,
+.custom-control-input.is-invalid ~ .custom-control-label::before {
+    background-color: lighten($color_danger, 25%);
+    border-color: lighten($color_danger, 25%);
+}
+.was-validated .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before,
+.custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before {
+    background-color: lighten($color_success, 20%);
+    border-color: lighten($color_success, 20%);
+}
+.was-validated .custom-control-input:invalid:focus:not(:checked) ~ .custom-control-label::before,
+.custom-control-input.is-invalid:focus:not(:checked) ~ .custom-control-label::before {
+    background-color: lighten($color_danger, 20%);
+    border-color: lighten($color_danger, 20%);
+}
+.was-validated .custom-control-input:invalid ~ .custom-control-label,
+.was-validated .custom-control-input:valid ~ .custom-control-label,
+.custom-control-input.is-invalid ~ .custom-control-label,
+.custom-control-input.is-valid ~ .custom-control-label {
+    color: $color_text_1;
+}
+.was-validated .invalid-feedback,
+.was-validated .valid-feedback,
+.invalid-feedback,
+.valid-feedback {
+    margin-top: 6px;
+}
+.was-validated .valid-feedback,
+.valid-feedback {
+    color: lighten($color_success, 15%);
+}
+.was-validated .invalid-feedback,
+.invalid-feedback {
+    color: lighten($color_danger, 15%);
+}
+.was-validated .custom-checkbox .invalid-feedback,
+.was-validated .custom-checkbox .valid-feedback,
+.custom-checkbox .invalid-feedback,
+.custom-checkbox .valid-feedback {
+    margin-top: 2px;
+    margin-left: -26px;
+}

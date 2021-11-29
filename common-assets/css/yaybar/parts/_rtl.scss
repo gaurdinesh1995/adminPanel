@@ -1,0 +1,39 @@
+/*
+ * RTL
+ */
+html.yay-rtl {
+    direction: rtl;
+
+    .yaybar {
+        .yay-icon {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+
+        .yaybar-wrap > ul li > a > .yay-icon-collapse,
+        .yaybar-wrap > ul li > a > .badge {
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+        .yaybar-wrap > ul {
+            /* Submenu levels */
+            @include sidebarLevels(1, 3, $dropdown_backgrounds, true);
+        }
+
+        .yay-label {
+            text-align: right;
+        }
+    }
+
+    .yay-hide .yaybar.yay-hide-to-small {
+        .yaybar-wrap > ul > li > a > .yay-icon {
+            margin-left: 0;
+        }
+
+        .yaybar-wrap > ul > li > .yay-submenu {
+            /* Fix submenu levels paddings */
+            @include sidebarLevelsSmallBar(1, 3, true);
+        }
+    }
+}

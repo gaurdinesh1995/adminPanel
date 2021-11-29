@@ -1,0 +1,28 @@
+
+.page-item {
+    &.disabled .page-link {
+        color: $color_dark_5;
+        background-color: $color_dark_2;
+    }
+    &.active .page-link {
+        background-color: $color_brand;
+    }
+}
+.page-link {
+    color: $color_dark_7;
+    background-color: $color_dark_2;
+
+    &:hover,
+    &.hover {
+        color: $color_secondary;
+        background-color: $color_dark_3;
+    }
+    &:focus,
+    &.focus {
+        color: $color_secondary;
+        background-color: $color_dark_3;
+    }
+    &:active {
+        background-color: $color_dark_4;
+    }
+}

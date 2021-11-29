@@ -1,0 +1,33 @@
+.blockquote {
+    padding: 18px 30px;
+    font-family: $font_blockquote;
+    font-size: 1.15rem;
+    color: $color_secondary;
+    background-color: $color_grey_1;
+    border-radius: .25rem;
+
+    p + .blockquote-footer {
+        margin-top: 8px;
+    }
+}
+.blockquote-footer {
+    margin-bottom: -3px;
+    font-size: 14px;
+    color: $color_grey_6;
+
+    &::before {
+        display: none;
+    }
+}
+
+// Style 2
+.blockquote-style-2 {
+    padding: 13px 30px 13px 26px;
+    background-color: #fff;
+    border-left: 4px solid $color_grey_2;
+    border-radius: 0;
+
+    .blockquote-footer {
+        color: $color_grey_5;
+    }
+}

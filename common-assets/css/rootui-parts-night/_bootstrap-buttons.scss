@@ -1,0 +1,195 @@
+// Grey
+.btn-grey-1 {
+    color: $color_secondary;
+    background-color: $color_dark_2;
+    border-color: $color_dark_2;
+
+    &:hover,
+    &.hover {
+        color: $color_secondary;
+        background-color: $color_dark_3;
+        border-color: $color_dark_3;
+    }
+    &:focus,
+    &.focus {
+        background-color: darken($color_dark_3, 3%);
+        border-color: darken($color_dark_3, 3%);
+    }
+}
+.btn-grey-2 {
+    color: $color_secondary;
+    background-color: $color_dark_3;
+    border-color: $color_dark_3;
+
+    &:hover,
+    &.hover {
+        color: $color_secondary;
+        background-color: $color_dark_4;
+        border-color: $color_dark_4;
+    }
+    &:focus,
+    &.focus {
+        background-color: darken($color_dark_4, 3%);
+        border-color: darken($color_dark_4, 3%);
+    }
+}
+.btn-grey-3 {
+    color: $color_secondary;
+    background-color: $color_dark_4;
+    border-color: $color_dark_4;
+
+    &:hover,
+    &.hover {
+        color: $color_secondary;
+        background-color: $color_dark_5;
+        border-color: $color_dark_5;
+    }
+    &:focus,
+    &.focus {
+        background-color: darken($color_dark_5, 3%);
+        border-color: darken($color_dark_5, 3%);
+    }
+}
+
+// Link
+.btn-link {
+    color: $color_brand;
+
+    &:focus,
+    &.focus {
+        color: $color_brand;
+    }
+    &:hover,
+    &.hover {
+        color: lighten($color_brand, 10%);
+    }
+    &:not(:disabled):not(.disabled):active:focus {
+        color: lighten($color_brand, 10%);
+    }
+}
+
+// Clean
+.btn-clean {
+    @each $name, $color in $colors_main {
+        &.btn-#{$name} {
+            color: $color;
+        }
+    }
+    &:hover,
+    &.hover {
+        color: $color_text_1;
+    }
+    &:not(.disabled):not(:disabled):active {
+        color: $color_text_1;
+    }
+}
+
+// Hover Outline
+.btn-hover-outline {
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+        color: inherit;
+        background-color: transparent;
+    }
+    @each $name, $color in $colors_alerts {
+        &.btn-#{$name} {
+            &:hover,
+            &.hover,
+            &:focus,
+            &.focus {
+                color: $color;
+            }
+        }
+    }
+}
+
+// Hover Colors
+@each $name, $color in $colors_alerts {
+    .btn-hover-#{$name} {
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            background-color: $color;
+            border-color: $color;
+        }
+        &:focus,
+        &.focus {
+            box-shadow: 0 0 0 .2rem rgba($color, .5);
+        }
+        &:not(:disabled):not(.disabled):active:focus {
+            background-color: darken($color, 10%);
+            border-color: darken($color, 10%);
+            box-shadow: 0 0 0 .2rem rgba($color, .5);
+        }
+
+        &.btn-hover-outline {
+            &:hover,
+            &.hover,
+            &:focus,
+            &.focus {
+                color: $color;
+                background-color: transparent;
+            }
+            &:focus,
+            &.focus {
+                box-shadow: 0 0 0 .2rem rgba($color, .5);
+            }
+        }
+    }
+}
+
+// Custom Round
+.btn-custom-round {
+    color: $color_dark_7;
+
+    > .badge,
+    > .badge.badge-circle {
+        box-shadow: 0 0 0 2px $color_dark_1;
+    }
+    &:focus,
+    &.focus {
+        color: $color_secondary;
+    }
+    &:hover,
+    &.hover {
+        color: $color_secondary;
+
+        > .badge {
+            box-shadow: 0 0 0 2px $color_dark_2;
+        }
+        &::after {
+            background-color: $color_dark_2;
+        }
+    }
+    &:not(.disabled):not(:disabled):active {
+        color: $color_text_1;
+
+        &::after {
+            background-color: $color_dark_2;
+        }
+    }
+}
+
+// Group
+.btn-group > .btn + .btn,
+.btn-group > .btn:last-child {
+    border-left-color: rgba(#fff, .1);
+
+    &:hover,
+    &.hover,
+    &:not(:disabled):not(.disabled).active {
+        border-left-color: rgba(#fff, .2);
+    }
+}
+.btn-group-vertical > .btn + .btn {
+    border-top-color: rgba(#fff, .1);
+
+    &:hover,
+    &.hover,
+    &:not(:disabled):not(.disabled).active {
+        border-top-color: rgba(#fff, .2);
+    }
+}

@@ -1,0 +1,118 @@
+
+.rui-shop-head {
+    padding: 15px 30px;
+    margin-bottom: 40px;
+    border-top: 1px solid $color_separator;
+    border-bottom: 1px solid $color_separator;
+}
+
+.rui-shop-ratings{
+    display:flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.rui-prcing{
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.rui-shop-content{
+      margin-left:10 ;
+}
+
+.rui-shop-title{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.rui-button{
+ display:flex;
+ 
+ align-self: flex-end;
+ margin:5px
+}
+
+.rui-button{
+    display: flex;
+    justify-content: center;
+}
+
+// Cart modal design
+
+.rui-card-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rui-cart-seprator{
+    border-top: 1px solid gray;
+    border-bottom: 1px  gray;
+   
+    
+}
+.rui-margin{
+   margin: 2%;
+}
+.rui-cart-items{
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.rui-button-height{
+    height: 30px;
+}
+.my-modal {
+    width: 30vw ;   /* Occupy the 90% of the screen width */
+    max-width: 35vw;
+    max-height: 00vw;
+} 
+
+.margin{
+    margin-top: 2%;
+    margin-left: 2%;
+}
+.rui-cart-icon-button {
+   
+    margin-left:2px;
+    &:hover {
+        color: $color_text_2;
+    }
+}
+.rui-delete{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    align-content: center;
+}
+
+.rui-cart-total{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 2%;
+}
+
+// Checkout page design
+
+.uri-checkout-div{
+    display: flex;
+    flex-direction: row;
+  margin-top: 2%;
+  margin-left: 3%;
+  border-right: 1px lightgray;
+}
+
+.rui-product-details{
+    margin-left:5%;
+    width: 50%;
+}
+.rui-checkout-button{
+    margin-top: 2%;
+   width: 120px;
+   text-align: center;
+
+}

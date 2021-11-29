@@ -1,0 +1,47 @@
+.swal2-popup {
+    padding: 30px;
+    background-color: $color_dropdown_bg;
+    box-shadow: 0 3px 10px $color_dropdown_shadow;
+
+    .swal2-title {
+        color: $color_text_1;
+    }
+    .swal2-content {
+        color: $color_text_2;
+    }
+    .swal2-styled {
+        &.swal2-confirm {
+            background-color: $color_brand;
+
+            &:hover {
+                background-color: darken($color_brand, 10%);
+            }
+            &:focus {
+                box-shadow: 0 0 0 .2rem rgba($color_brand, .5);
+            }
+        }
+    }
+}
+@each $name, $color in $colors_alerts {
+    .swal2-icon.swal2-#{$name} {
+        color: $color;
+        border-color: rgba($color, .3);
+
+        [class^=swal2-#{$name}-line] {
+            background-color: $color;
+        }
+        .swal2-success-ring {
+            border-color: rgba($color, .3);
+        }
+    }
+    .swal2-icon.swal2-error {
+        border-color: rgba($color_danger, .3);
+
+        [class^="swal2-x-mark-line"] {
+            background-color: $color_danger;
+        }
+        .swal2-success-ring {
+            border-color: rgba($color_danger, .3);
+        }
+    }
+}

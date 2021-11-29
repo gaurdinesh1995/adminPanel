@@ -1,0 +1,23 @@
+.rui-swiper {
+    .swiper-container {
+        &::before {
+            background: linear-gradient(90deg, $color_dark_2 0%, rgba($color_dark_2, 0) 100%);
+        }
+        &::after {
+            background: linear-gradient(270deg, $color_dark_2 0%, rgba($color_dark_2, 0) 100%);
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $color_secondary;
+        background-color: $color_dark_1;
+        border-color: $color_dark_3;
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+            background-color: $color_dark_2;
+        }
+    }
+}

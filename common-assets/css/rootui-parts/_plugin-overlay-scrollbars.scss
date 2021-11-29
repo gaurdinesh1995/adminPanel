@@ -1,0 +1,28 @@
+.rui-scrollbar {
+    overflow: hidden;
+
+    &.os-theme-dark .os-scrollbar {
+        > .os-scrollbar-track > .os-scrollbar-handle {
+            background-color: $color_grey_2;
+        }
+        &:hover > .os-scrollbar-track > .os-scrollbar-handle,
+        &.active > .os-scrollbar-track > .os-scrollbar-handle {
+            background-color: $color_grey_3;
+        }
+        &.os-scrollbar-vertical {
+            width: 8px;
+        }
+        &.os-scrollbar-horizontal {
+            height: 8px;
+        }
+    }
+
+    &.os-host-scrolling .os-scrollbar {
+        visibility: visible;
+        opacity: 1;
+
+        > .os-scrollbar-track > .os-scrollbar-handle {
+            background-color: $color_grey_3;
+        }
+    }
+}

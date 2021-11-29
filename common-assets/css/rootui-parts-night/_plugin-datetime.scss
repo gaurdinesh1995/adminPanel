@@ -1,0 +1,155 @@
+.xdsoft_datetimepicker {
+    background-color: $color_dropdown_bg;
+    border-color: $color_dropdown_border;
+    box-shadow: 0 3px 10px $color_dropdown_shadow;
+
+    .xdsoft_calendar thead th {
+        color: $color_text_2;
+    }
+
+    // Month Picker
+    .xdsoft_monthpicker {
+        .xdsoft_prev,
+        .xdsoft_next,
+        .xdsoft_today_button {
+            color: $color_dark_7;
+
+            &:hover {
+                color: $color_text_1;
+            }
+        }
+        .xdsoft_label {
+            color: $color_text_1;
+        }
+    }
+
+    // Select Dropdown
+    .xdsoft_label {
+        background-color: $color_dropdown_bg;
+
+        > .xdsoft_select {
+            background-color: $color_dropdown_bg;
+            border-color: $color_dropdown_border;
+            box-shadow: 0 3px 10px $color_dropdown_shadow;
+
+            > div > .xdsoft_option {
+                color: $color_secondary;
+
+                &:hover {
+                    // stylelint-disable-next-line
+                    color: $color_text_1 !important;
+
+                    &::before {
+                        background-color: $color_dark_3;
+                    }
+                }
+                &.xdsoft_current {
+                    // stylelint-disable-next-line
+                    color: $color_text_1 !important;
+
+                    &::before {
+                        background-color: rgba($color_brand, .8);
+                    }
+                }
+            }
+            .xdsoft_scroller {
+                // stylelint-disable-next-line
+                background-color: $color_dark_4 !important;
+
+                &:hover {
+                    // stylelint-disable-next-line
+                    background-color: $color_dark_4 !important;
+                }
+            }
+        }
+    }
+
+    // Time Picker
+    .xdsoft_timepicker {
+        .xdsoft_time_box {
+            .xdsoft_scroller {
+                // stylelint-disable-next-line
+                background-color: $color_dark_4 !important;
+
+                &:hover {
+                    // stylelint-disable-next-line
+                    background-color: $color_dark_4 !important;
+                }
+            }
+
+            > div > div {
+                color: $color_secondary;
+
+                &:hover {
+                    // stylelint-disable-next-line
+                    color: $color_text_1 !important;
+
+                    &::before {
+                        background-color: $color_dark_3;
+                    }
+                }
+
+                &.xdsoft_current {
+                    // stylelint-disable-next-line
+                    color: $color_text_1 !important;
+
+                    &::before {
+                        background-color: rgba($color_brand, .8);
+                    }
+                }
+            }
+        }
+        .xdsoft_prev,
+        .xdsoft_next {
+            color: $color_dark_7;
+
+            &:hover {
+                color: $color_text_1;
+            }
+        }
+    }
+
+    // Calendar
+    .xdsoft_calendar td {
+        &.xdsoft_other_month > div {
+            color: $color_dark_6;
+
+            &:hover {
+                // stylelint-disable-next-line
+                color: $color_dark_7 !important;
+            }
+        }
+
+        > div {
+            color: $color_secondary;
+        }
+        &:hover {
+            // stylelint-disable-next-line
+            color: $color_text_1 !important;
+
+            > div {
+                // stylelint-disable-next-line
+                color: $color_text_1 !important;
+                // stylelint-disable-next-line
+                background-color: $color_dark_3 !important;
+            }
+        }
+        &.xdsoft_current {
+            > div {
+                // stylelint-disable-next-line
+                color: $color_text_1 !important;
+                // stylelint-disable-next-line
+                background-color: rgba($color_brand, .8) !important;
+            }
+            &.xdsoft_today > div {
+                // stylelint-disable-next-line
+                color: $color_text_1 !important;
+                // stylelint-disable-next-line
+                background-color: rgba($color_brand, .8) !important;
+            }
+        }
+    }
+}
+.rui-datetimepicker-wrap::after {
+    background-color: rgba($color_dark_4, .85);
+}

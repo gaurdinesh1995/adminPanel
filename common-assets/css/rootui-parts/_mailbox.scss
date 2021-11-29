@@ -1,0 +1,267 @@
+.rui-mailbox {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border: 1px solid $color_separator;
+    border-radius: .25rem;
+
+    // Head
+    .rui-mailbox-head {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid $color_separator;
+    }
+    .rui-mailbox-search {
+        display: flex;
+        flex: 0 0 30%;
+        align-items: center;
+        max-width: 30%;
+        padding: 18px 30px 18px 19px;
+
+        > form {
+            width: 100%;
+        }
+
+        + .rui-mailbox-buttons {
+            padding-left: 30px;
+        }
+    }
+    .rui-mailbox-buttons {
+        flex: 0 0 70%;
+        max-width: 70%;
+        padding: 21px 30px;
+
+        > ul {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: -30px -10px 0;
+
+            > li {
+                display: inline-flex;
+                padding: 30px 10px 0;
+                list-style: none;
+            }
+        }
+    }
+    .rui-mailbox-write {
+        width: 38px;
+        height: 38px;
+        color: #fff;
+        background-color: rgba($color_brand, .8);
+    }
+
+    // Footer
+    .rui-mailbox-footer {
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid $color_separator;
+    }
+
+    // List
+    .rui-mailbox-list {
+        flex: 0 0 30%;
+        max-width: 30%;
+        min-height: 380px;
+        background-color: #fff;
+        border-right: 1px solid $color_separator;
+
+        > ul {
+            padding: 0;
+            margin: 15px 0;
+
+            > li {
+                list-style: none;
+            }
+        }
+    }
+    .os-content > ul {
+        padding: 0;
+        margin: 15px 0;
+
+        > li {
+            list-style: none;
+        }
+    }
+
+    // Content
+    .rui-mailbox-content {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+    .rui-mailbox-content-head,
+    .rui-mailbox-content-body,
+    .rui-mailbox-content-footer {
+        position: relative;
+    }
+    .rui-mailbox-content-head {
+        padding: 30px;
+
+        + .rui-mailbox-content-body {
+            border-top: 1px solid $color_separator;
+        }
+    }
+    .rui-mailbox-content-body {
+        position: relative;
+        padding: 30px 30px;
+
+        + .rui-mailbox-content-footer {
+            padding-top: 0;
+        }
+    }
+    .rui-mailbox-content-footer {
+        padding: 30px;
+    }
+    .rui-mailbox-content-title {
+        margin-bottom: -5px;
+
+        + .rui-mailbox-content-subtitle {
+            margin-top: 13px;
+        }
+    }
+    .rui-mailbox-content-subtitle {
+        margin-bottom: -5px;
+        color: $color_secondary;
+    }
+    .rui-mailbox-content-date {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        top: 25px;
+        right: 30px;
+        color: $color_grey_5;
+    }
+
+    // Item
+    .rui-mailbox-item {
+        position: relative;
+        display: block;
+        padding: 15px 30px;
+        background-color: #fff;
+        transition: background-color .1s ease-in-out;
+
+        &:hover,
+        &.hover,
+        &.active {
+            text-decoration: none;
+            background-color: $color_grey_1;
+        }
+    }
+    .rui-mailbox-item-unread {
+        .rui-mailbox-item-title::after {
+            position: relative;
+            display: inline-block;
+            top: -2px;
+            width: 6px;
+            height: 6px;
+            margin-left: 10px;
+            background-color: $color_grey_3;
+            border-radius: 100%;
+        }
+    }
+    .rui-mailbox-item-title {
+        display: block;
+        margin-bottom: 4px;
+
+        &::after {
+            content: "";
+        }
+    }
+    .rui-mailbox-item-subtitle {
+        display: block;
+        margin-bottom: 4px;
+        color: $color_text_1;
+    }
+    .rui-mailbox-item-text {
+        display: block;
+        height: 19px;
+        margin-bottom: -5px;
+        overflow: hidden;
+        color: $color_grey_5;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .rui-mailbox-item-date {
+        position: absolute;
+        display: inline-block;
+        top: 14px;
+        right: 30px;
+        color: $color_grey_5;
+    }
+    @include media-breakpoint-down(lg) {
+        .rui-mailbox-search,
+        .rui-mailbox-list {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+        .rui-mailbox-buttons,
+        .rui-mailbox-content {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .rui-mailbox-search,
+        .rui-mailbox-buttons,
+        .rui-mailbox-list,
+        .rui-mailbox-content {
+            flex: none;
+            max-width: none;
+        }
+
+        // Head
+        .rui-mailbox-head {
+            background-color: #fff;
+        }
+        .rui-mailbox-search {
+            width: 100%;
+            max-width: 100%;
+        }
+        // List
+        .rui-mailbox-list {
+            width: 100%;
+            height: 380px;
+            border-right: 0;
+
+            > ul {
+                margin: 15px 0;
+            }
+        }
+        .os-content > ul {
+            margin: 15px 0;
+        }
+        .rui-mailbox-item.active {
+            background-color: transparent;
+        }
+        .rui-mailbox-item-date {
+            top: 14px;
+        }
+        // Content
+        .rui-mailbox-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            background-color: #fff;
+            opacity: 0;
+            transition: visibility .15s ease-in-out, opacity .15s ease-in-out;
+            z-index: -1;
+
+            &.open {
+                visibility: visible;
+                opacity: 1;
+            }
+            &.show {
+                z-index: 2;
+            }
+        }
+        .rui-mailbox-content-body {
+            height: calc(100% - 104px);
+        }
+    }
+}

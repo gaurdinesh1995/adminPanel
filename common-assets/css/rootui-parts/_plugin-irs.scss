@@ -1,0 +1,77 @@
+$height: 6px !default;
+
+.rui-irs,
+.rui-irs-double {
+    > input {
+        display: none;
+    }
+    .rui-irs-value {
+        display: flex;
+        margin-top: 5px;
+        color: $color_secondary;
+    }
+    .irs {
+        font-family: $font_body;
+    }
+    .irs-line {
+        height: $height;
+        background-color: $color_grey_3;
+        border-radius: 3px;
+    }
+    .irs-bar {
+        height: $height;
+        background-color: lighten($color_brand, 30%);
+    }
+    .irs-min,
+    .irs-max {
+        top: 4px;
+        padding: 0;
+        font-size: 11px;
+        color: $color_grey_5;
+        background-color: transparent;
+    }
+    .irs-from,
+    .irs-to,
+    .irs-single {
+        padding: 1px 4px;
+        font-size: 10px;
+        visibility: hidden;
+        background-color: lighten($color_brand, 10%);
+        border-radius: .2rem;
+        opacity: 0;
+        transition: opacity .1s ease-in-out, visibility .1s ease-in-out;
+
+        &::before {
+            display: none;
+        }
+    }
+    .irs-handle {
+        top: 20px;
+        height: 16px;
+
+        > i:first-child {
+            left: 1px;
+            width: 16px;
+            height: 16px;
+            background-color: $color_brand;
+            border-radius: 100%;
+            transition: background-color .1s ease-in-out, box-shadow .1s ease-in-out;
+        }
+        &:hover > i:first-child {
+            background-color: darken($color_brand, 10%);
+        }
+        &:active > i:first-child,
+        &.state_hover > i:first-child {
+            background-color: lighten($color_brand, 15%);
+            box-shadow: 0 0 0 1px #fff, 0 0 0 .2rem rgba($color_brand, .2);
+        }
+    }
+    &.rui-irs-change {
+        .irs-from,
+        .irs-to,
+        .irs-single {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

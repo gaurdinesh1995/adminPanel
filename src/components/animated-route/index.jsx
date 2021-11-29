@@ -1,0 +1,4 @@
+/**
+ * Styles
+ */
+import './style.scss';

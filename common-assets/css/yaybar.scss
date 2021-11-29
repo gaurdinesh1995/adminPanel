@@ -1,0 +1,20 @@
+@import "yaybar/variables";
+
+// Light Sidebar
+// stylelint-disable
+$sidebar_top_offset: 0;
+
+$text_color: #979797;
+$hover_text_color: #1a1a1a;
+$sidebar_background: #f8f9fa;
+
+$dropdown_text_color: $text_color;
+$dropdown_hover_text_color: $hover_text_color;
+// $dropdown_backgrounds: darken(#007bff, 4), darken(#007bff, 8), darken(#007bff, 12), darken(#007bff, 16);
+$dropdown_backgrounds: #fff, #fff, #fff, #fff;
+
+$active_text_color: $hover_text_color;
+
+$scroll_bar_background: rgba(0, 0, 0, .15);
+
+@import "yaybar/include";

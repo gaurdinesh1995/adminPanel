@@ -1,0 +1,38 @@
+.rui-changelog {
+    .rui-changelog-subtitle {
+        color: $color_dark_7;
+
+        a {
+            color: $color_secondary;
+
+            &:hover,
+            &.hover {
+                color: $color_text_1;
+            }
+        }
+    }
+    .rui-changelog-item {
+        color: $color_text_2;
+
+        &::before {
+            background-color: $color_dark_5;
+        }
+        .rui-changelog-item-type {
+            color: $color_text_2;
+        }
+    }
+    @each $name, $color in $colors_alerts {
+        .rui-changelog-#{$name}::before {
+            background-color: $color;
+        }
+    }
+
+    .rui-changelog-file {
+        color: $color_secondary;
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+        }
+    }
+}

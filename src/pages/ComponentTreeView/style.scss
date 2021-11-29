@@ -1,0 +1,75 @@
+@import "./rc-tree.scss";
+@import "../../../common-assets/css/variables";
+
+.rui-rc-tree.rc-tree {
+  // Indent.
+  .rc-tree-indent-unit {
+    padding-left: 30px;
+  }
+
+  // Line.
+  .rc-tree-treenode {
+    height: 30px;
+    line-height: 30px;
+
+    .rc-tree-node-content-wrapper {
+      height: 24px;
+      padding: 0;
+    }
+
+    // lines.
+    .rc-tree-switcher {
+      background: none;
+      opacity: 1;
+    }
+    .rc-tree-switcher::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: -21px;
+      width: 10px;
+      height: 10px;
+      border-bottom: 1px solid #f3f4f7;
+      border-left: 1px solid #f3f4f7;
+    }
+    + .rc-tree-treenode .rc-tree-switcher::before {
+      top: -19px;
+      height: 30px;
+    }
+    &.rui-rc-tree-root .rc-tree-switcher::before {
+      content: none;
+    }
+    &.rui-rc-tree-first .rc-tree-switcher::before {
+      top: -5px;
+      height: 16px;
+    }
+  }
+
+  // Switcher.
+  .rc-tree-switcher {
+    position: absolute;
+    margin-top: 6px;
+    opacity: 0;
+  }
+
+  // Icons.
+  span.rc-tree-iconEle {
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    line-height: 24px;
+
+    > .rui-icon {
+      margin-top: -4px;
+      margin-right: 14px;
+      color: $color_grey_5;
+      transition: 0.1s color;
+    }
+  }
+  .rc-tree-node-content-wrapper:hover,
+  .rc-tree-switcher:hover + .rc-tree-node-content-wrapper {
+    .rc-tree-iconEle > .rui-icon {
+      color: $color_text_1;
+    }
+  }
+}

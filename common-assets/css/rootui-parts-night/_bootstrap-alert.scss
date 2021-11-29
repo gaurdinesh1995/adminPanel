@@ -1,0 +1,20 @@
+.alert {
+    color: $color_secondary;
+    background-color: $color_dark_2;
+
+    hr {
+        border-top-color: $color_dark_4;
+    }
+    .alert-link {
+        color: $color_text_1;
+    }
+}
+@each $name, $color in $colors_alerts {
+    .alert-#{$name} {
+        border-color: $color;
+    }
+}
+.alert-dismissible .close:hover,
+.alert-dismissible .close.hover {
+    color: $color_text_1;
+}

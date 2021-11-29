@@ -1,0 +1,55 @@
+.card {
+    border: 1px solid $color_separator;
+
+    .list-group-item {
+        padding-right: 2.3rem;
+        padding-left: 2.3rem;
+    }
+}
+.card-header,
+.card-footer {
+    padding: 19px 30px;
+    margin-bottom: 0;
+    background-color: $color_grey_1;
+    border-color: $color_separator;
+}
+.card-body {
+    padding: 25px 30px;
+
+    .card-title {
+        margin-bottom: 1.35rem;
+    }
+    p {
+        margin-bottom: 1.4rem;
+    }
+}
+.card-title {
+    + .card-subtitle {
+        margin-top: -10px;
+    }
+}
+.card-text {
+    &:last-child {
+        margin-bottom: -5px;
+    }
+}
+.card-link {
+    display: inline-block;
+}
+.card-btn-collapse {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 2.15rem;
+    right: 30px;
+    z-index: 1;
+
+    &:not(.collapsed) {
+        color: $color_text_1;
+
+        &::after {
+            background-color: #fff;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.blockquote {
+    color: $color_secondary;
+    background-color: $color_dark_2;
+}
+.blockquote-footer {
+    color: $color_dark_7;
+}
+
+// Style 2
+.blockquote-style-2 {
+    background-color: $color_dark_2;
+    border-left-color: $color_dark_3;
+
+    .blockquote-footer {
+        color: $color_dark_6;
+    }
+}

@@ -1,0 +1,15 @@
+.fancybox-toolbar > .fancybox-button {
+    background-color: rgba($color_dark_1, .9);
+
+    &:hover {
+        background-color: rgba($color_dark_1, 1);
+    }
+}
+.fancybox-button {
+    > div {
+        background-color: rgba($color_dark_1, .9);
+    }
+    &:hover > div {
+        background-color: rgba($color_dark_1, 1);
+    }
+}

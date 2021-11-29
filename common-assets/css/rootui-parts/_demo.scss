@@ -1,0 +1,98 @@
+.demo {
+    > .card,
+    > .list-group {
+        display: inline-block;
+        width: 32rem;
+        max-width: 100%;
+
+        .list-group-item {
+            color: $color_secondary;
+
+            &.active {
+                color: #fff;
+            }
+            &.disabled {
+                color: darken($color_secondary, 12);
+            }
+        }
+    }
+    > .table-responsive-md > .dataTables_wrapper > .rui-datatable {
+        min-width: 600px;
+    }
+    > .modal {
+        position: static;
+        display: block;
+        background-color: rgba($color_grey_3, .85);
+
+        &.fade {
+            display: none;
+        }
+    }
+    .spinner-border,
+    .spinner-grow {
+        margin-right: 10px;
+    }
+    h6:last-child {
+        margin-bottom: -3px;
+    }
+    p:last-child {
+        margin-bottom: -6px;
+    }
+    .display-4:last-child {
+        margin-bottom: -9px;
+    }
+    .lead:last-child {
+        margin-bottom: -8px;
+    }
+    .blockquote:last-child {
+        margin-bottom: 0;
+    }
+    .table {
+        margin-bottom: 0;
+
+        + .table {
+            margin-top: 20px;
+        }
+    }
+    .progress + .progress {
+        margin-top: 10px;
+    }
+    .rui-touchspin {
+        max-width: 250px;
+
+        + .rui-touchspin {
+            margin-top: 20px;
+        }
+    }
+}
+.demo-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    color: $color_secondary;
+    text-align: center;
+    cursor: pointer;
+    background-color: $color_grey_1;
+    border: 1px solid $color_grey_1;
+    border-radius: .25rem;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+    > .rui-icon {
+        width: 26px;
+        height: 26px;
+        stroke: $color_text_1;
+        margin-bottom: 15px;
+    }
+
+    &:hover {
+        background-color: $color_grey_2;
+        border-color: darken($color_separator, 6);
+    }
+}
+.demo-colors {
+    padding: 25px 30px;
+    margin-top: 10px;
+    border-radius: .25rem;
+}

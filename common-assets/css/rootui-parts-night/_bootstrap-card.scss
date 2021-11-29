@@ -1,0 +1,20 @@
+.card {
+    background-color: $color_dark_1;
+    border-color: $color_dark_3;
+}
+.card-header,
+.card-footer {
+    background-color: $color_dark_2;
+    border-color: $color_dark_3;
+}
+.card-btn-collapse:not(.collapsed) {
+    color: $color_text_1;
+
+    &::after {
+        background-color: $color_dark_1;
+    }
+}
+.card-link:hover,
+.card-link.hover {
+    color: lighten($color_brand, 10%);
+}

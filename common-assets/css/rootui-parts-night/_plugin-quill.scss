@@ -1,0 +1,71 @@
+.rui-quill {
+    .rui-quill-toolbar {
+        border-color: $color_dark_3;
+
+        .ql-stroke {
+            stroke: $color_dark_6;
+        }
+        .ql-fill {
+            fill: $color_dark_6;
+        }
+        button {
+            &:hover {
+                .ql-stroke {
+                    stroke: $color_text_2;
+                }
+                .ql-fill {
+                    fill: $color_text_2;
+                }
+            }
+            &.ql-active {
+                .ql-stroke {
+                    stroke: $color_brand;
+                }
+                .ql-fill {
+                    fill: $color_brand;
+                }
+            }
+        }
+        // Select
+        .ql-picker {
+            svg.rui-icon {
+                stroke: $color_dark_6;
+            }
+
+            .ql-picker-label {
+                color: $color_dark_6;
+
+                &:hover {
+                    color: $color_text_2;
+                }
+            }
+            .ql-picker-options {
+                background-color: $color_dropdown_bg;
+                border-color: $color_dropdown_border;
+                box-shadow: 0 3px 10px $color_dropdown_shadow;
+
+                .ql-picker-item {
+                    color: $color_dark_6;
+
+                    &:hover {
+                        color: $color_text_2;
+                    }
+                }
+            }
+            &.ql-expanded {
+                svg.rui-icon {
+                    stroke: $color_text_2;
+                }
+                .ql-picker-label {
+                    color: $color_text_2;
+                }
+                .ql-picker-options {
+                    border-color: $color_dark_3;
+                }
+            }
+        }
+    }
+    .rui-quill-editor {
+        border-color: $color_dark_3;
+    }
+}

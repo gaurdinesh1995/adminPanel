@@ -1,0 +1,29 @@
+.fancybox-container .fancybox-bg {
+    background-color: rgba($color_dark_4, .85);
+}
+
+.rui-popup {
+    background-color: $color_dark_1;
+    box-shadow: 0 3px 10px $color_dropdown_shadow;
+
+    @include media-breakpoint-up(lg) {
+        &::-webkit-scrollbar-track {
+            background-color: $color_text_1;
+        }
+        &::-webkit-scrollbar {
+            background-color: $color_text_1;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $color_dark_5;
+        }
+    }
+
+    .fancybox-close-small {
+        color: $color_dark_6;
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+        }
+    }
+}

@@ -1,0 +1,178 @@
+.yay-hide .yaybar.rui-yaybar {
+    &.yay-overlay {
+        box-shadow: 0 0 0 5px $color_dark_1;
+    }
+    .yaybar-wrap > ul > li > .yay-submenu {
+        // stylelint-disable-next-line
+        background-color: $color_dropdown_bg !important;
+        border-color: $color_dropdown_border;
+        box-shadow: 0 3px 10px $color_dropdown_shadow;
+
+        .dropdown-menu-triangle {
+            border-color: transparent;
+            border-right-color: $color_dropdown_bg;
+
+            &::before {
+                border-color: transparent;
+                border-right-color: $color_dropdown_border;
+            }
+        }
+    }
+    // Right Side
+    &.yay-right-side ul > li {
+        > .yay-submenu {
+            .dropdown-menu-triangle {
+                border-color: transparent;
+                border-left-color: $color_dropdown_bg;
+
+                &::before {
+                    border-color: transparent;
+                    border-left-color: $color_dropdown_border;
+                }
+            }
+        }
+    }
+}
+.yaybar.rui-yaybar {
+    background-color: $color_dark_1;
+
+    + .rui-yaybar-bg {
+        background-color: rgba($color_dark_4, .85);
+    }
+
+    // Scrollbar
+    .os-scrollbar {
+        background-color: $color_dark_1;
+
+        > .os-scrollbar-track > .os-scrollbar-handle {
+            background-color: $color_dark_3;
+        }
+        &:hover > .os-scrollbar-track > .os-scrollbar-handle,
+        &.active > .os-scrollbar-track > .os-scrollbar-handle {
+            background-color: $color_dark_5;
+        }
+        > .os-scrollbar-track {
+            background-color: $color_dark_1;
+        }
+    }
+    &.os-host-scrolling .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+        background-color: $color_dark_4;
+    }
+
+    &.yay-overlay {
+        box-shadow: 0 3px 10px $color_dropdown_shadow;
+    }
+
+    .yaybar-wrap ul {
+        > li {
+            > a {
+                color: $color_dark_6;
+
+                &::before {
+                    background-color: $color_dark_6;
+                }
+                > span:not([class]) {
+                    color: $color_text_1;
+                }
+                > .rui-yaybar-circle {
+                    background-color: $color_dark_2;
+                }
+                .yay-icon {
+                    color: $color_dark_7;
+                }
+                .yay-icon-collapse {
+                    color: $color_dark_6;
+                }
+            }
+            &:hover > a,
+            &.hover > a {
+                color: $color_text_1;
+
+                &::before {
+                    background-color: $color_text_1;
+                }
+                > span:not([class]) {
+                    color: $color_text_1;
+                }
+                > .yay-icon {
+                    color: $color_text_1;
+                }
+                > .yay-icon-collapse {
+                    color: $color_text_1;
+                }
+            }
+            &.yay-label {
+                color: $color_dark_7;
+            }
+            &.yay-item-active > a {
+                // stylelint-disable-next-line
+                color: $color_brand !important;
+
+                &::before {
+                    background-color: $color_brand;
+                }
+                > span:not([class]) {
+                    color: $color_brand;
+                }
+                > .yay-icon {
+                    color: $color_brand;
+                }
+                > .yay-icon-collapse {
+                    color: $color_brand;
+                }
+            }
+            &.yay-item-active.yay-submenu-open > a {
+                // stylelint-disable-next-line
+                color: $color_brand !important;
+
+                &::before {
+                    background-color: $color_brand;
+                }
+                > span:not([class]) {
+                    color: $color_brand;
+                }
+                > .yay-icon {
+                    color: $color_brand;
+                }
+                > .yay-icon-collapse {
+                    color: $color_brand;
+                }
+            }
+            &.yay-submenu-open > a {
+                // stylelint-disable-next-line
+                color: $color_text_1 !important;
+
+                &::before {
+                    background-color: $color_text_1;
+                }
+                > span:not([class]) {
+                    color: $color_text_1;
+                }
+                > .yay-icon {
+                    color: $color_text_1;
+                }
+                > .yay-icon-collapse {
+                    color: $color_text_1;
+                }
+            }
+        }
+
+        // Dropdown Child
+        .yay-submenu > li {
+            > a {
+                color: $color_dark_7;
+            }
+            &:hover > a,
+            &.hover > a {
+                color: $color_text_1;
+
+                > span:not([class]) {
+                    color: $color_text_1;
+                }
+            }
+        }
+        &.yay-submenu-open > a {
+            color: $color_text_1;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.rui-profile {
+    // Info
+    .rui-profile-info {
+        .rui-profile-info-subtitle {
+            color: $color_dark_6;
+        }
+        .rui-profile-info-mail,
+        .rui-profile-info-phone {
+            color: $color_text_2;
+
+            &:hover {
+                color: $color_text_1;
+            }
+        }
+    }
+    // Numbers
+    .rui-profile-numbers {
+        border-top-color: $color_dark_3;
+    }
+    .rui-profile-number .rui-profile-number-title {
+        color: $color_text_1;
+    }
+}

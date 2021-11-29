@@ -1,0 +1,45 @@
+.editor-toolbar {
+    padding: 11px 10px;
+    background-color: $color_grey_1;
+    border-color: $color_separator;
+
+    &::before,
+    &::after {
+        display: none;
+    }
+
+    button {
+        color: $color_secondary;
+        transition: color .1s ease-in-out;
+
+        &:hover {
+            color: $color_text_1;
+            background-color: transparent;
+            border-color: transparent;
+        }
+    }
+    i.separator {
+        border-right-color: transparent;
+        border-left-color: $color_separator;
+    }
+}
+.CodeMirror {
+    padding: 10px 15px;
+    color: $color_text_2;
+    border-color: $color_separator;
+
+    .CodeMirror-scroll {
+        margin-right: -32px;
+    }
+}
+.editor-statusbar {
+    padding: 0;
+    margin-top: 11px;
+    color: $color_grey_5;
+}
+
+// fullscreen fix for menus
+.rui-markdown-fullscreen .rui-navbar,
+.rui-markdown-fullscreen .yaybar {
+    z-index: 1;
+}

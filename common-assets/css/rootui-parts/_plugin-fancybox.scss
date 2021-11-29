@@ -1,0 +1,53 @@
+.fancybox-slide--html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.fancybox-container .fancybox-bg {
+    background-color: rgba($color_dark_2, .9);
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity .25s ease-in-out;
+}
+.fancybox-is-open .fancybox-bg {
+    opacity: 1;
+}
+
+.fancybox-toolbar {
+    top: 10px;
+    right: 10px;
+
+    > .fancybox-button {
+        background-color: #fff;
+        border-radius: 0;
+
+        &:hover {
+            background-color: #fff;
+        }
+
+        &:first-of-type {
+            border-radius: .25rem 0 0 .25rem;
+        }
+        &:last-of-type {
+            border-radius: 0 .25rem .25rem 0;
+        }
+    }
+}
+.fancybox-button {
+    color: $color_secondary;
+    background: none;
+    transition: color .15s ease-in-out;
+
+    > div {
+        background-color: #fff;
+        border-radius: .25rem;
+    }
+    &:hover {
+        color: $color_text_1;
+
+        > div {
+            background-color: #fff;
+        }
+    }
+}

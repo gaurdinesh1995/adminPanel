@@ -1,0 +1,373 @@
+@import "../common-assets/css/variables-night";
+
+html.rui-night-mode {
+  /*------------------------------------------------------------------
+
+    Demo
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/demo";
+
+  /*------------------------------------------------------------------
+
+    Base
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/base";
+
+  /*------------------------------------------------------------------
+
+    Typography
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/typography";
+
+  /*------------------------------------------------------------------
+
+    Helpers
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/helpers";
+
+  // Layouts
+
+  /*------------------------------------------------------------------
+
+    Navbar
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/navbar";
+
+  /*------------------------------------------------------------------
+
+    Section lines
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/section-lines";
+
+  /*------------------------------------------------------------------
+
+    Sign
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/sign";
+
+  /*------------------------------------------------------------------
+
+    Mailbox
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/mailbox";
+
+  /*------------------------------------------------------------------
+
+    Messenger
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/messenger";
+
+  /*------------------------------------------------------------------
+
+    Project Management
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/project-management";
+
+  /*------------------------------------------------------------------
+
+    File Manager
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/file-manager";
+
+  /*------------------------------------------------------------------
+
+    Profile
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/profile";
+
+  /*------------------------------------------------------------------
+
+    Footer
+
+    -------------------------------------------------------------------*/
+  @import "../common-assets/css/rootui-parts-night/footer";
+
+  /*------------------------------------------------------------------
+
+    Elements
+
+    -------------------------------------------------------------------*/
+
+  /*---------------------------
+    Element Alert
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-alert";
+
+  /*---------------------------
+    Element Breadcrumb
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-breadcrumb";
+
+  /*---------------------------
+    Element Buttons
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-buttons";
+
+  /*---------------------------
+    Element Card
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-card";
+
+  /*---------------------------
+    Element Carousel
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-carousel";
+
+  /*---------------------------
+    Element Collapse
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-collapse";
+
+  /*---------------------------
+    Element Table
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-table";
+
+  /*---------------------------
+    Element Pagination
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-pagination";
+
+  /*---------------------------
+    Element Dropdown
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-dropdown";
+
+  /*---------------------------
+    Element Forms
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-forms";
+
+  /*---------------------------
+    Element List group
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-list-group";
+
+  /*---------------------------
+    Element Media object
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-media-object";
+
+  /*---------------------------
+    Element Modal
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-modal";
+
+  /*---------------------------
+    Element Navs
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-navs";
+
+  /*---------------------------
+    Element Popovers
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-popovers";
+
+  /*---------------------------
+    Element Progress
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-progress";
+
+  /*---------------------------
+    Element Toast
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-toast";
+
+  /*---------------------------
+    Element Blockquote
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/bootstrap-blockquote";
+
+  /*---------------------------
+    Element Popup
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/element-popup";
+
+  /*---------------------------
+    Element Snippet
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/element-snippet";
+
+  /*---------------------------
+    Element Timeline
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/element-timeline";
+
+  /*---------------------------
+    Element Changelog
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/element-changelog";
+
+  /*---------------------------
+    Element Kanban
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/element-kanban";
+
+  /*---------------------------
+    Element Task
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/element-task";
+
+  /*---------------------------
+    Element Image Boxes
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/element-image-boxes";
+
+  /*---------------------------
+    Element Widget
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/element-widget";
+
+  /*---------------------------
+    Element Social links
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/element-social-links";
+
+  /*---------------------------
+    Element Box Window
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/element-box-window";
+
+  /*---------------------------
+        Element Feature
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/element-feature";
+
+  /*------------------------------------------------------------------
+
+    Plugins
+
+    -------------------------------------------------------------------*/
+
+  /*---------------------------
+        Plugin Yay
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-yay";
+
+  /*---------------------------
+        Plugin Overlay Scrollbars
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-overlay-scrollbars";
+
+  /*---------------------------
+        Plugin Emojione Area
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-emojione-area";
+
+  /*---------------------------
+        Plugin Sortablejs
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-sortable";
+
+  /*---------------------------
+        Plugin Swiper
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-swiper";
+
+  /*---------------------------
+        Plugin Fullcalendar
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-fullcalendar";
+
+  /*---------------------------
+        Plugin Fancybox
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-fancybox";
+
+  /*---------------------------
+        Plugin Jstree
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-jstree";
+
+  /*---------------------------
+        Plugin Sweetalert
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-sweetalert";
+
+  /*---------------------------
+        Plugin Jqvmap
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-jqvmap";
+
+  /*---------------------------
+        Plugin Datatable
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-datatable";
+
+  /*---------------------------
+        Plugin DateTime Picker
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-datetime";
+
+  /*---------------------------
+        Plugin DateRange Picker
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-daterange";
+
+  /*---------------------------
+        Plugin Touchspin
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-touchspin";
+
+  /*---------------------------
+        Plugin Ion Range Slider
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-irs";
+
+  /*---------------------------
+        EasyMDE (Markdown)
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-easymde";
+
+  /*---------------------------
+        Colorpicker
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-pickr";
+
+  /*---------------------------
+        Plugin Chartist
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-chart-chartist";
+
+  /*---------------------------
+        Plugin Selectize
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-selectize";
+
+  /*---------------------------
+        Plugin Peity (chart)
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-chart-peity";
+
+  /*---------------------------
+        Plugin Flot (chart)
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-chart-flot";
+
+  /*---------------------------
+        Plugin Highlight
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-highlight";
+
+  /*---------------------------
+        Plugin Quill
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-quill";
+
+  /*---------------------------
+        Plugin Dropzone
+    ----------------------------*/
+  @import "../common-assets/css/rootui-parts-night/plugin-dropzone";
+}

@@ -1,0 +1,98 @@
+.popover {
+    font-family: $font_body;
+    border: 1px solid $color_separator;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .03);
+
+    > .arrow {
+        &::after {
+            display: none;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: 0;
+            z-index: -1;
+        }
+    }
+}
+.bs-popover-top,
+.bs-popover-auto[x-placement^="top"] {
+    margin: 0 0 15px;
+
+    > .arrow {
+        margin: 0 0 -11px;
+        border: 10px solid transparent;
+        border-top: 9px solid #fff;
+
+        &::before {
+            margin: -9px 0 0 -11px;
+            border: 11px solid transparent;
+            border-top: 10px solid $color_separator;
+        }
+    }
+}
+.bs-popover-right,
+.bs-popover-auto[x-placement^="right"] {
+    margin: 0 0 0 15px;
+
+    > .arrow {
+        margin: 0 0 0 -11px;
+        border: 10px solid transparent;
+        border-right: 9px solid #fff;
+
+        &::before {
+            margin: -11px 0 0 -12px;
+            border: 11px solid transparent;
+            border-right: 10px solid $color_separator;
+        }
+    }
+}
+.bs-popover-bottom,
+.bs-popover-auto[x-placement^="bottom"] {
+    margin: 15px 0 0;
+
+    > .arrow {
+        margin: -11px 0;
+        border: 10px solid transparent;
+        border-bottom: 9px solid #fff;
+
+        &::before {
+            margin: -12px 0 0 -11px;
+            border: 11px solid transparent;
+            border-bottom: 10px solid $color_separator;
+        }
+    }
+}
+.bs-popover-left,
+.bs-popover-auto[x-placement^="left"] {
+    margin: 0 15px 0 0;
+
+    > .arrow {
+        margin: 0 -11px 0 0;
+        border: 10px solid transparent;
+        border-left: 9px solid #fff;
+
+        &::before {
+            margin: -11px 0 2px -9px;
+            border: 11px solid transparent;
+            border-left: 10px solid $color_separator;
+        }
+    }
+}
+
+.popover-header {
+    padding: 20px;
+    margin-top: 0;
+    margin-bottom: -20px;
+    font-size: 1.145rem;
+    background-color: transparent;
+    border: 0;
+}
+.popover-body {
+    padding: 20px;
+    color: $color_text_2;
+}

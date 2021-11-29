@@ -1,0 +1,101 @@
+.rui-swiper {
+    position: relative;
+
+    .swiper-container {
+        border-radius: .25rem;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            z-index: 2;
+        }
+        &::before {
+            left: 0;
+            background-image: linear-gradient(90deg, $color_grey_2, rgba(255, 255, 255, 0));
+        }
+        &::after {
+            right: 0;
+            background-image: linear-gradient(270deg, $color_grey_2, rgba(255, 255, 255, 0));
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        margin-top: -19px;
+        color: $color_secondary;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid $color_separator;
+        border-radius: 100%;
+        transition: background-color .15s ease-in-out, color .15s ease-in-out;
+
+        &::after {
+            content: none;
+        }
+
+        &:focus,
+        &.hover {
+            outline: none;
+        }
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+            background-color: $color_grey_1;
+        }
+    }
+    .swiper-button-prev {
+        left: -19px;
+    }
+    .swiper-button-next {
+        right: -19px;
+    }
+    .swiper-slide {
+        width: calc(17% - 30px);
+        height: auto;
+
+        @media screen and (max-width: 1600px) and (min-width: 1200px) {
+            width: 20%;
+        }
+        @include media-breakpoint-only(lg) {
+            width: 30%;
+        }
+        @include media-breakpoint-only(md) {
+            width: 40%;
+        }
+        @include media-breakpoint-only(sm) {
+            width: 60%;
+        }
+        @include media-breakpoint-only(xs) {
+            width: 100%;
+        }
+    }
+    .rui-swiper-slide-total {
+        width: calc(34% - 36px);
+
+        > .rui-widget {
+            height: 100%;
+        }
+        @include media-breakpoint-only(lg) {
+            width: 40%;
+        }
+        @include media-breakpoint-only(md) {
+            width: 50%;
+        }
+        @include media-breakpoint-only(sm) {
+            width: 70%;
+        }
+        @include media-breakpoint-only(xs) {
+            width: 100%;
+        }
+    }
+}

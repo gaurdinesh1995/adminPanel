@@ -1,0 +1,8 @@
+// Show triangle.
+.dropdown-menu-triangle {
+    display: none;
+
+    .dropdown-triangle > .dropdown-menu > & {
+        display: block;
+    }
+}

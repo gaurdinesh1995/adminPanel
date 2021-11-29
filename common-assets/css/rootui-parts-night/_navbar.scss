@@ -1,0 +1,66 @@
+.rui-navbar {
+    .rui-navbar-content .rui-navbar-dropdown-notice > li:hover,
+    .rui-navbar-content .rui-navbar-dropdown-notice > li.hover {
+        .rui-navbar-notice {
+            background-color: $color_dark_2;
+        }
+        .rui-navbar-notice-img {
+            color: $color_dark_5;
+            background-color: $color_dark_3;
+        }
+    }
+    .rui-navbar-language {
+        color: $color_text_1;
+
+        &:hover,
+        &.hover,
+        &.active {
+            color: $color_text_1;
+            background-color: $color_dark_2;
+        }
+    }
+}
+
+.rui-navbar-top {
+    background-color: $color_dark_1;
+
+    .rui-navbar-content > .nav {
+        .dropdown-menu > .dropdown > .dropdown-item::after {
+            background-color: $color_dark_6;
+        }
+        .dropdown:hover > .dropdown-item::after,
+        .dropdown.hover > .dropdown-item::after {
+            background-color: $color_text_1;
+        }
+    }
+}
+.rui-navbar-mobile {
+    background-color: $color_dark_1;
+    box-shadow: 0 0 0 5px $color_dark_1;
+
+    + .rui-navbar-bg {
+        background-color: rgba($color_dark_4, .85);
+    }
+    > .rui-navbar-collapse {
+        &:not(.show)::-webkit-scrollbar-thumb {
+            background-color: $color_dark_1;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $color_dark_1;
+        }
+        &::-webkit-scrollbar {
+            background-color: $color_dark_1;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $color_dark_4;
+        }
+    }
+    .rui-navbar-content .nav .dropdown-menu > .dropdown {
+        > a::after {
+            background-color: $color_dark_6;
+        }
+        &.show > a::after {
+            background-color: $color_text_1;
+        }
+    }
+}

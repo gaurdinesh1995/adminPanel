@@ -1,0 +1,187 @@
+$size: 34px !default;
+
+.rui-daterange {
+    min-width: 200px;
+}
+.daterangepicker {
+    width: auto;
+    margin-top: 10px;
+    font-family: $font_body;
+    background-color: #fff;
+    border: 1px solid $color_separator;
+    border-radius: .25rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .03);
+    z-index: 1000;
+
+    &::before,
+    &::after {
+        display: none;
+    }
+
+    .drp-calendar {
+        max-width: none;
+
+        &.left {
+            padding: 15px 0 14px 16px;
+        }
+        &.right {
+            padding: 15px 15px 14px 26px;
+        }
+    }
+    &.show-calendar {
+        .drp-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px 30px;
+            border: 0;
+
+            .drp-selected {
+                display: block;
+                padding: 0;
+                margin-right: auto;
+                color: $color_grey_5;
+                text-align: left;
+            }
+            .btn-sm {
+                padding: 8.5px 14px;
+                font-size: 9px;
+            }
+            .btn {
+                margin-left: 11px;
+                background-color: $color_brand;
+                border-color: $color_brand;
+
+                &:hover {
+                    background-color: darken($color_brand, 10%);
+                    border-color: darken($color_brand, 10%);
+                }
+                &:focus {
+                    box-shadow: 0 0 0 .2rem rgba($color_brand, .5);
+                }
+
+                &.btn-default {
+                    color: $color_secondary;
+                    background-color: transparent;
+                    border-color: transparent;
+
+                    &:hover {
+                        color: $color_text_1;
+                    }
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        width: 307px;
+
+        .drp-calendar.left,
+        .drp-calendar.right {
+            padding: 15px;
+        }
+    }
+
+    .calendar-table {
+        background-color: transparent;
+
+        td {
+            border: 0;
+        }
+        thead th {
+            height: $size + 4px;
+            font-size: 12px;
+            font-weight: 600;
+            color: $color_text_2;
+        }
+        tbody td {
+            position: relative;
+            width: $size + 4px;
+            min-width: $size + 4px;
+            height: $size + 4px;
+            color: $color_secondary;
+            background-color: transparent;
+            transition: color 1s ease-in-out;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 4px;
+                right: 4px;
+                bottom: 4px;
+                left: 4px;
+                border-radius: 100%;
+                transition: background-color .1s ease-in-out;
+                z-index: -1;
+            }
+            &:hover {
+                color: $color_text_1;
+                background-color: transparent;
+
+                &::after {
+                    background-color: $color_grey_1;
+                }
+            }
+            &.in-range {
+                &::after {
+                    background-color: $color_grey_2;
+                }
+            }
+            &.off.start-date,
+            &.off.end-date {
+                background-color: transparent;
+            }
+            &.start-date,
+            &.end-date {
+                color: #fff;
+
+                &::after {
+                    background-color: rgba($color_brand, .8);
+                }
+            }
+            &.off {
+                color: $color_grey_5;
+
+                &::after {
+                    background-color: #fff;
+                }
+                &:hover {
+                    color: $color_text_1;
+
+                    &::after {
+                        background-color: $color_grey_1;
+                    }
+                }
+            }
+        }
+        .prev,
+        .next {
+            width: $size;
+            min-width: $size;
+            height: $size;
+            color: $color_grey_5;
+            transition: color .1s ease-in-out;
+
+            > span {
+                display: none;
+            }
+            > .rui-icon {
+                margin-top: -1px;
+            }
+            &:hover {
+                color: $color_text_1;
+                background-color: transparent;
+            }
+        }
+        .next > .rui-icon {
+            transform: rotate(180deg);
+        }
+        .month {
+            font-size: 1rem;
+            font-weight: 400;
+            color: $color_secondary;
+        }
+    }
+}

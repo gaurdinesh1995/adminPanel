@@ -1,0 +1,52 @@
+.peity {
+    background-color: $color_grey_1;
+    border-radius: .2rem;
+    transition: background-color .1s ease-in-out;
+
+    &:hover,
+    &.hover {
+        background-color: $color_grey_2;
+    }
+}
+.peity-pie + .peity {
+    background-color: transparent;
+
+    &:hover,
+    &.hover {
+        background-color: transparent;
+    }
+}
+.peity-light + .peity {
+    background-color: transparent;
+
+    &:hover,
+    &.hover {
+        background-color: transparent;
+    }
+}
+.peity-line,
+.peity-pie,
+.peity-donut,
+.peity-bar {
+    display: none;
+}
+@each $name, $color in $colors_alerts {
+    .peity-#{$name} + .peity {
+        > polygon,
+        > rect {
+            fill: rgba($color, .8);
+            stroke: transparent;
+            transition: fill .1s ease-in-out;
+        }
+        &:hover,
+        &.hover {
+            > polygon,
+            > rect {
+                fill: rgba($color, 1);
+            }
+        }
+    }
+}
+p > .peity {
+    margin-top: -2px;
+}

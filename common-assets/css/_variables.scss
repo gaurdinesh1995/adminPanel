@@ -1,0 +1,134 @@
+@import "./bootstrap/functions";
+@import "./bootstrap/variables";
+@import "./bootstrap/mixins";
+
+// text colors
+$color_text_1: #393f49 !default;
+$color_text_2: #4b515b !default;
+$color_text_3: #fff !default;
+
+// Grey colors
+$color_grey_1: #f8f9fa !default;
+$color_grey_2: #f3f4f7 !default;
+$color_grey_3: #eaecf0 !default;
+$color_grey_4: #d7d9e0 !default;
+$color_grey_5: #bcbec0 !default;
+$color_grey_6: #a4a6a8 !default;
+
+// Dark colors
+$color_dark_1: #292f38 !default;
+$color_dark_2: #323942 !default;
+$color_dark_3: #3c424c !default;
+$color_dark_4: #454c55 !default;
+$color_dark_5: #4f565f !default;
+$color_dark_6: #586069 !default;
+$color_dark_7: #626973 !default;
+
+// Color separators
+$color_separator: #e6ecf0 !default;
+$color_separator_dark: #3c424c !default;
+
+// Light colors
+$color_light_1: #c7d1db !default;
+$color_light_2: #a9b1bb !default;
+
+// Dropdown Menu
+$color_dropdown_bg: #2b323b !default;
+$color_dropdown_border: #252c36 !default;
+$color_dropdown_shadow: rgba(36, 43, 53, .9) !default;
+
+// main colors list
+$colors_main: (
+    "white"   : #fff,
+    "black"   : #000,
+    "1"  : $color_text_1,
+    "2"  : $color_text_2,
+    "grey-1"  : $color_grey_1,
+    "grey-2"  : $color_grey_2,
+    "grey-3"  : $color_grey_3,
+    "grey-4"  : $color_grey_4,
+    "grey-5"  : $color_grey_5,
+    "grey-6"  : $color_grey_6
+) !default;
+
+// Colors Alerts
+$color_brand: #725ec3 !default;
+$color_primary: #007bff !default;
+$color_secondary: #6c757d !default;
+$color_success: #2fc787 !default;
+$color_danger: #ef5164 !default;
+$color_warning: #fdbf21 !default;
+$color_info: #32bfc8 !default;
+$color_light: #f8f9fa !default;
+$color_dark: #393f49 !default;
+
+$colors_alerts: (
+    "brand"     : $color_brand,
+    "primary"   : $color_primary,
+    "secondary" : $color_secondary,
+    "success"   : $color_success,
+    "danger"    : $color_danger,
+    "warning"   : $color_warning,
+    "info"      : $color_info,
+    "light"     : $color_light,
+    "dark"      : $color_dark
+) !default;
+
+$colors_toasts: (
+    "brand"     : $color_brand,
+    "primary"   : $color_primary,
+    "secondary" : $color_secondary,
+    "success"   : $color_success,
+    "danger"    : $color_danger,
+    "warning"   : $color_warning,
+    "info"      : $color_info,
+    "light"     : $color_light,
+    "dark"      : $color_dark
+) !default;
+
+$colors_social: (
+    "behance": #487cfb,
+    "bitbucket": #36517e,
+    "dropbox": #4d86d9,
+    "dribbble": #cc4d86,
+    "deviantart": #bac940,
+    "envato": #91b34c,
+    "facebook": #475995,
+    "flickr": #db0180,
+    "foursquare": #d94a75,
+    "github": #464646,
+    "google": #4285f4,
+    "google-plus": #c14d3d,
+    "instagram": #d12054,
+    "linkedin": #457ab3,
+    "medium": #71c66d,
+    "odnoklassniki": #d8732a,
+    "paypal": #1d3283,
+    "pinterest": #ae262b,
+    "rss": #e06618,
+    "reddit": #de470b,
+    "skype": #62aded,
+    "soundcloud": #df5611,
+    "slack": #543b56,
+    "steam": #272425,
+    "tumblr": #384961,
+    "twitter": #6da9de,
+    "vimeo": #69b5e7,
+    "vk": #657da0,
+    "wordpress": #4072a1,
+    "youtube": #c6271e
+) !default;
+
+// fonts
+$font_body: "Open Sans", sans-serif !default;
+$font_nav: $font_body !default;
+$font_title: "Nunito Sans", sans-serif !default;
+$font_blockquote: "PT Serif", serif !default;
+
+// fonts settings
+$html_font_size: 13px !default;
+$body_line_height: 1.8 !default;
+$heading_line_height: 1.5 !default;
+
+// navbar settings
+$navbar_expand: "lg" !default;

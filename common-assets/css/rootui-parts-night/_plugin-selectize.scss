@@ -1,0 +1,123 @@
+.rui-selectize {
+    // Base
+    .rui-selectize-element {
+        .selectize-input {
+            color: $color_text_2;
+            background-color: $color_dark_1;
+            border-color: $color_dark_4;
+            box-shadow: 0 0 0 0 rgba($color_brand, 0);
+
+            &:focus,
+            &.focus {
+                background-color: $color_dark_1;
+                border-color: rgba($color_brand, .6);
+                box-shadow: 0 0 0 .2rem rgba($color_brand, .2);
+            }
+        }
+        .selectize-dropdown {
+            background-color: $color_dropdown_bg;
+            border-color: $color_dropdown_border;
+            box-shadow: 0 3px 10px $color_dropdown_shadow;
+
+            .option {
+                color: $color_secondary;
+
+                &:hover {
+                    color: $color_text_1;
+                }
+            }
+            .create {
+                color: $color_secondary;
+
+                strong {
+                    color: $color_text_2;
+                }
+            }
+            .highlight {
+                background-color: $color_dark_3;
+            }
+            .active {
+                color: $color_text_2;
+                background-color: transparent;
+            }
+        }
+    }
+    // Select
+    .rui-selectize-select {
+        .selectize-input,
+        &.single .selectize-input {
+            &::after {
+                border-top-color: $color_dark_6;
+            }
+            &:focus::after,
+            &.focus::after {
+                border-top-color: $color_text_2;
+            }
+        }
+        // Custom Select-Icon
+        .rui-selectize-select-icon.selectize-input {
+            .rui-selectize-select-icon {
+                stroke: $color_dark_6;
+            }
+            &:focus .rui-selectize-select-icon,
+            &.focus .rui-selectize-select-icon {
+                stroke: $color_text_2;
+            }
+        }
+    }
+    // Input
+    .rui-selectize-input {
+        .selectize-input .item {
+            color: $color_secondary;
+            background-color: $color_dark_2;
+
+            &:hover {
+                background-color: $color_dark_3;
+            }
+            &.active {
+                color: $color_text_2;
+                background-color: $color_dark_3;
+            }
+        }
+        .selectize-dropdown .create strong {
+            background-color: $color_dark_2;
+        }
+    }
+    // Icon
+    .rui-selectize-icon {
+        .selectize-input {
+            &.dropdown-active > .option > .rui-icon {
+                stroke: $color_text_2;
+            }
+            > .option > .rui-icon {
+                stroke: $color_dark_6;
+            }
+        }
+        .selectize-dropdown .option {
+            &.active > .rui-icon {
+                stroke: $color_text_2;
+            }
+            > .rui-icon {
+                stroke: $color_dark_6;
+            }
+        }
+    }
+    // Github
+    .rui-selectize-github .selectize-dropdown > .selectize-dropdown-content > div {
+        background-color: $color_dark_1;
+
+        .title .by {
+            color: $color_dark_6;
+        }
+        .description {
+            color: $color_dark_7;
+        }
+        .meta {
+            color: $color_secondary;
+        }
+        &.selected,
+        &.active {
+            background-color: $color_dark_2;
+        }
+    }
+}

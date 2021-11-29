@@ -1,0 +1,29 @@
+/**
+ * Effects
+ */
+
+/* Push */
+.yaybar.yay-push ~ .content-wrap {
+    transition: transform $sidebar_toggle_transition, margin-left $sidebar_toggle_transition;
+    will-change: transform, margin-left;
+    transform: translateX($sidebar_width);
+}
+
+.yay-hide .yaybar.yay-push ~ .content-wrap {
+    transform: translateX(0);
+}
+
+/* Shrink */
+.yaybar.yay-shrink ~ .content-wrap {
+    margin-left: $sidebar_width;
+    transition: margin-left $sidebar_toggle_transition;
+    will-change: margin-left;
+}
+
+.yay-hide .yaybar.yay-shrink ~ .content-wrap {
+    margin-left: 0;
+}
+
+.yay-hide .yaybar.yay-shrink.yay-hide-to-small ~ .content-wrap {
+    margin-left: $sidebar_small_width;
+}

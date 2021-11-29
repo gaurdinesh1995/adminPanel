@@ -1,0 +1,213 @@
+.rui-colorpicker {
+    position: relative;
+
+    &.rui-colorpicker-presence-addon .pickr {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        visibility: hidden;
+        opacity: 0;
+
+        .pcr-button {
+            height: 100%;
+        }
+    }
+    .pickr {
+        display: inline-flex;
+        align-items: center;
+
+        .pcr-button {
+            width: 16px;
+            height: 16px;
+            border-radius: .2rem;
+
+            &::before {
+                border-radius: .2rem;
+                box-shadow: 0 0 0 0 transparent;
+                opacity: .4;
+                transition: box-shadow .15s ease-in-out;
+            }
+
+            &:focus {
+                box-shadow: none;
+
+                &::before {
+                    box-shadow: 0 0 0 .15rem currentColor;
+                }
+            }
+        }
+    }
+}
+.pcr-app[data-theme="classic"] {
+    width: auto;
+    min-width: 320px;
+    height: auto;
+    padding: 20px;
+    border: 1px solid $color_separator;
+    border-radius: .25rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .03);
+
+    .pcr-selection {
+        .pcr-color-preview {
+            width: 20px;
+            min-width: 20px;
+            margin-right: 10px;
+
+            &::before {
+                border-radius: .25rem;
+                opacity: .3;
+            }
+            .pcr-last-color {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    border-radius: .2rem;
+                    box-shadow: 0 0 0 0 transparent;
+                    opacity: .6;
+                    transition: box-shadow .15s ease-in-out;
+                }
+                &:focus {
+                    box-shadow: none;
+
+                    &::before {
+                        box-shadow: 0 0 0 .15rem rgba($color_grey_1, .5), 0 0 0 .15rem currentColor;
+                    }
+                }
+            }
+            .pcr-last-color,
+            .pcr-current-color {
+                height: calc(50% - 5px);
+                border-radius: .2rem;
+            }
+            .pcr-current-color {
+                box-shadow: 0 -12px 0 0 #fff;
+            }
+        }
+        .pcr-color-palette {
+            min-height: 100px;
+            .pcr-palette {
+                border-radius: .2rem;
+
+                &::before {
+                    border-radius: .25rem;
+                    opacity: .3;
+                }
+            }
+        }
+        .pcr-color-chooser {
+            margin-left: 10px;
+        }
+        .pcr-color-opacity {
+            margin-left: 10px;
+        }
+        .pcr-picker {
+            width: 14px;
+            height: 14px;
+            border: 1px solid $color_separator;
+        }
+    }
+    .pcr-interaction {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px 0;
+
+        > input {
+            display: inline-flex;
+            align-items: center;
+            min-height: 36px;
+            padding: 7.5px 15px;
+            margin: 10px 5px 0;
+            font-size: 1rem;
+            letter-spacing: initial;
+            border-radius: .25rem;
+        }
+        .pcr-save,
+        .pcr-type {
+            padding: 9.5px 15px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .pcr-result {
+            padding: 7.5px 15px;
+            color: $color_text_2;
+            background-color: lighten($color_grey_1, 1);
+            border: 1px solid $color_separator;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+            &:hover {
+                background-color: lighten($color_grey_1, 1);
+            }
+            &:focus {
+                background-color: lighten($color_grey_1, 1);
+                border-color: rgba($color_brand, .6);
+                box-shadow: 0 0 0 .2rem rgba($color_brand, .2);
+            }
+        }
+        .pcr-type {
+            line-height: 0;
+            color: $color_secondary;
+            background-color: $color_grey_1;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+            &:hover {
+                background-color: $color_grey_2;
+                filter: none;
+            }
+            &:focus {
+                color: $color_secondary;
+                background-color: $color_grey_3;
+                box-shadow: none;
+            }
+            &.active {
+                color: $color_secondary;
+                background-color: $color_grey_3;
+            }
+            &:active {
+                background-color: $color_grey_4;
+            }
+        }
+        .pcr-save {
+            line-height: 0;
+            color: #fff;
+            background-color: $color_brand;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+            &:hover {
+                background-color: darken($color_brand, 5%);
+                filter: none;
+            }
+            &:focus {
+                color: #fff;
+                background-color: darken($color_brand, 5%);
+                box-shadow: 0 0 0 .2rem rgba($color_brand, .4);
+            }
+            &:active {
+                background-color: darken($color_brand, 10%);
+            }
+        }
+    }
+}
+.rui-colorpicker-wrap {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: 1010;
+
+    > .pcr-app[data-theme="classic"] {
+        position: static;
+    }
+}

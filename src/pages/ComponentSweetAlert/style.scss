@@ -1,0 +1,7 @@
+@import "~sweetalert2/dist/sweetalert2.min.css";
+
+@import "../../../common-assets/css/variables";
+
+body {
+  @import "../../../common-assets/css/rootui-parts/plugin-sweetalert";
+}

@@ -1,0 +1,92 @@
+
+/**
+ * Small Bar
+ */
+.yay-hide .yaybar {
+    transform: translateX(-$sidebar_width);
+}
+
+/* Hide to Small bar */
+.yay-hide .yaybar.yay-hide-to-small {
+    position: absolute;
+    width: $sidebar_small_width;
+    transform: none;
+
+    &:not(.os-host) {
+        overflow: visible;
+    }
+
+    .yaybar-wrap > ul {
+        width: $sidebar_small_width;
+
+        .yay-label,
+        .yay-content {
+            display: none;
+        }
+
+        > li > a {
+            padding: 0;
+            padding: $items_vertical_padding 0;
+            font-size: 0;
+            line-height: 1;
+            text-align: center;
+
+            > .yay-icon {
+                justify-content: center;
+                width: 100%;
+                margin-right: 0;
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+
+            > .yay-icon-collapse {
+                display: none;
+            }
+
+            > .badge {
+                position: absolute;
+                top: 3px;
+                right: 8px;
+                font-size: $sidebar_font_size * .75;
+            }
+        }
+
+        > li {
+            position: relative;
+        }
+
+        > li > .yay-submenu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: $sidebar_width;
+            visibility: hidden;
+            background-color: nth($dropdown_backgrounds, 1);
+
+            /* Fix submenu levels paddings */
+            @include sidebarLevelsSmallBar(1, 3);
+        }
+        > li:hover > .yay-submenu {
+            display: block !important; // stylelint-disable-line
+            visibility: visible;
+        }
+    }
+}
+
+.yay-hide .yaybar.yay-hide-to-small ~ .content-wrap {
+    margin-left: $sidebar_small_width;
+}
+
+.yaybar.yay-overlay.yay-hide-to-small ~ .content-wrap {
+    margin-left: $sidebar_small_width;
+}
+
+.yay-hide .yay-hide-to-small .yaybar-wrap {
+    width: auto;
+}
+.yay-hide-to-small .yaybar-wrap {
+    width: $sidebar_width;
+}

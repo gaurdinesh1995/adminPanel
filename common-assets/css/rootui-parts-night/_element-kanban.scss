@@ -1,0 +1,33 @@
+.rui-kanban-col {
+    background-color: $color_dark_2;
+
+    &::-webkit-scrollbar-track {
+        background-color: $color_dark_2;
+    }
+    &::-webkit-scrollbar {
+        background-color: $color_dark_2;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $color_dark_4;
+    }
+}
+.rui-kanban-item {
+    border-color: $color_dark_3;
+
+    > .rui-task {
+        background-color: $color_dark_1;
+    }
+    &:hover,
+    &.hover {
+        background-color: $color_dark_1;
+        border-color: $color_dark_4;
+
+        > .rui-task {
+            background-color: $color_dark_1;
+        }
+    }
+    &.sortable-chosen {
+        background-color: $color_dark_1;
+        border-color: $color_dark_5;
+    }
+}

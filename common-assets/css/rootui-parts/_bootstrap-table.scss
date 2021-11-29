@@ -1,0 +1,89 @@
+.table {
+    thead {
+        th {
+            padding: 20px 25px;
+            font-weight: 600;
+            color: $color_text_2;
+            border-color: $color_separator;
+            border-bottom-width: 1px;
+        }
+    }
+    th,
+    td {
+        padding: 15px 25px;
+        font-weight: 400;
+        color: $color_secondary;
+        border-color: $color_separator;
+    }
+
+    // Thead Light
+    .thead-light {
+        th {
+            background-color: $color_grey_1;
+            border-color: $color_separator;
+        }
+    }
+    // Thead Dark
+    .thead-dark {
+        th {
+            background-color: $color_dark;
+            border-color: lighten($color_dark, 3%);
+        }
+    }
+}
+
+// Dark
+.table-dark {
+    background-color: $color_dark;
+
+    thead {
+        th {
+            color: $color_grey_2;
+            border-color: lighten($color_dark, 3%);
+        }
+    }
+    th,
+    td {
+        color: $color_grey_5;
+        border-color: lighten($color_dark, 3%);
+    }
+
+    &.table-hover tbody tr:hover {
+        background-color: lighten($color_dark, 2%);
+    }
+}
+
+// Striped
+.table-striped {
+    &.table-dark tbody tr:nth-of-type(odd) {
+        background-color: lighten($color_dark, 2%);
+    }
+    tbody tr:nth-of-type(odd) {
+        background-color: $color_grey_1;
+    }
+}
+
+// Hover
+.table-hover {
+    &.table-dark tbody tr:hover {
+        background-color: lighten($color_dark, 2%);
+    }
+    tbody tr {
+        transition: background-color .1s ease-in-out;
+
+        &:hover {
+            background-color: $color_grey_1;
+        }
+    }
+}
+
+// Size
+.table-sm {
+    thead th {
+        padding: 15px 20px;
+    }
+    th,
+    td {
+        padding: 10px 20px;
+    }
+}

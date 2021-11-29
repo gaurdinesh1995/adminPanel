@@ -1,0 +1,15 @@
+.rui-scrollbar {
+    .os-scrollbar {
+        > .os-scrollbar-track > .os-scrollbar-handle {
+            background-color: $color_dark_3;
+        }
+        &:hover > .os-scrollbar-track > .os-scrollbar-handle,
+        &.active > .os-scrollbar-track > .os-scrollbar-handle {
+            background-color: $color_dark_4;
+        }
+    }
+
+    &.os-host-scrolling .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+        background-color: $color_dark_4;
+    }
+}

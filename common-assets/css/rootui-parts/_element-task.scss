@@ -1,0 +1,196 @@
+.rui-task {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 17px 30px 16px;
+    transition: background-color .15s ease-in-out;
+
+    &:hover,
+    &.hover {
+        background-color: $color_grey_1;
+    }
+    .rui-task-title {
+        display: block;
+        margin-top: -4px;
+        color: $color_secondary;
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+            text-decoration: none;
+        }
+    }
+    .rui-task-subtitle {
+        display: block;
+        margin-top: 5px;
+        color: $color_grey_6;
+
+        > a {
+            color: $color_secondary;
+
+            &:hover,
+            &.hover {
+                color: $color_text_1;
+                text-decoration: none;
+            }
+        }
+    }
+    .rui-task-content {
+        display: flex;
+        flex: 0 0 100%;
+        flex-basis: 0;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: 100%;
+        margin-right: 10px;
+    }
+    .rui-task-icon {
+        display: flex;
+        align-items: center;
+        color: $color_grey_5;
+
+        &:first-child {
+            margin-right: 10px;
+        }
+        &:not(:first-child) > .rui-icon {
+            margin-right: 5px;
+        }
+        &:not([href]):hover,
+        &:not([href]).hover {
+            color: $color_grey_5;
+        }
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+            text-decoration: none;
+        }
+    }
+    @each $name, $color in $colors_alerts {
+        &.rui-task-#{$name} > .rui-task-icon:first-child {
+            color: $color;
+        }
+    }
+}
+
+.rui-task-status {
+    margin-bottom: 30px;
+    color: $color_grey_6;
+
+    a {
+        color: $color_secondary;
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+            text-decoration: none;
+        }
+    }
+
+    @each $name, $color in $colors_alerts {
+        &.rui-task-status-#{$name} .rui-task-status-item-icon {
+            color: #fff;
+            background-color: $color;
+        }
+    }
+
+    .rui-task-status-item {
+        display: flex;
+        align-items: center;
+    }
+    .rui-task-status-item-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        margin-right: 15px;
+        color: $color_secondary;
+        background-color: $color_grey_1;
+        border-radius: 32px;
+    }
+}
+
+.rui-task-comment {
+    padding: 30px;
+    border: 1px solid $color_grey_2;
+    border-radius: .25rem;
+
+    + .rui-task-comment,
+    + .rui-task-send {
+        margin-top: 30px;
+    }
+
+    .rui-task-comment-text {
+        margin-top: 30px;
+
+        p:last-child {
+            margin-bottom: -5px;
+        }
+
+        .rui-snippet,
+        .rui-snippet-single {
+            margin-bottom: 1.8rem;
+        }
+    }
+}
+
+.rui-task-sidebar {
+    a {
+        color: $color_secondary;
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+            text-decoration: none;
+        }
+    }
+
+    .rui-task-sidebar-title {
+        margin-bottom: 1rem;
+    }
+    .rui-task-sidebar-list {
+        margin-right: -30px;
+        margin-left: -30px;
+
+        > li {
+            padding: 30px 30px;
+            color: $color_grey_6;
+
+            &:first-child {
+                padding-top: 0;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+    .rui-task-info-list > li {
+        padding: 4px 0;
+
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    .rui-task-info-item {
+        display: flex;
+        align-items: center;
+
+        > .rui-icon {
+            margin-right: 5px;
+        }
+    }
+    .rui-task-project-list > li {
+        padding: 7px 0;
+
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}

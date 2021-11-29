@@ -1,0 +1,70 @@
+.table {
+    thead th {
+        color: $color_text_1;
+        border-color: $color_dark_3;
+    }
+    th,
+    td {
+        color: $color_secondary;
+        border-color: $color_dark_3;
+    }
+
+    // Thead Light
+    .thead-light th {
+        color: $color_text_1;
+        background-color: $color_dark_2;
+        border-color: $color_dark_3;
+    }
+    // Thead Dark
+    .thead-dark th {
+        color: $color_text_1;
+        background-color: $color_dropdown_bg;
+        border-color: lighten($color_dark, 3%);
+    }
+}
+
+// Dark
+.table-dark {
+    background-color: $color_dropdown_bg;
+
+    thead th {
+        color: $color_text_1;
+        border-color: lighten($color_dark_1, 3%);
+    }
+    th,
+    td {
+        color: $color_secondary;
+        border-color: lighten($color_dark_1, 3%);
+    }
+}
+
+// Striped
+.table-striped {
+    &.table-dark tbody tr:nth-of-type(odd) {
+        background-color: lighten($color_dark_1, 1%);
+    }
+    tbody tr:nth-of-type(odd) {
+        background-color: $color_dark_2;
+    }
+}
+
+// Hover
+.table-hover {
+    &.table-dark tbody tr:hover {
+        background-color: lighten($color_dark_1, 1%);
+    }
+    tbody tr:hover {
+        background-color: $color_dark_2;
+    }
+}
+
+// Size
+.table-sm {
+    thead th {
+        padding: 15px 20px;
+    }
+    th,
+    td {
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,13 @@
+.rui-chartjs-doughnut {
+    height: 80px;
+}
+.rui-chartjs-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > .rui-chartjs-doughnut:not(:first-of-type) {
+        position: absolute;
+    }
+}

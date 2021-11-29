@@ -1,0 +1,39 @@
+.peity {
+    background-color: $color_dark_2;
+
+    &:hover,
+    &.hover {
+        background-color: $color_dark_3;
+    }
+}
+.peity-pie + .peity {
+    background-color: transparent;
+
+    &:hover,
+    &.hover {
+        background-color: transparent;
+    }
+}
+.peity-light + .peity {
+    background-color: transparent;
+
+    &:hover,
+    &.hover {
+        background-color: transparent;
+    }
+}
+@each $name, $color in $colors_alerts {
+    .peity-#{$name} + .peity {
+        > polygon,
+        > rect {
+            fill: rgba($color, .8);
+        }
+        &:hover,
+        &.hover {
+            > polygon,
+            > rect {
+                fill: rgba($color, 1);
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+body {
+    color: $color_text_2;
+}
+
+a {
+    color: $color_brand;
+
+    &:hover,
+    &.hover {
+        color: darken($color_brand, 20%);
+    }
+    &:active {
+        color: $color_brand;
+    }
+}
+
+label {
+    color: $color_secondary;
+}
+
+code:not(.hljs) {
+    color: $color_secondary;
+    background-color: $color_dark_2;
+}
+
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: $color_text_1;
+}

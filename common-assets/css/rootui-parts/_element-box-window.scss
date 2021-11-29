@@ -1,0 +1,57 @@
+.rui-box-window {
+    display: block;
+    border-radius: .3rem;
+    box-shadow: 0 0 0 transparent;
+
+    .rui-box-window-bar {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        padding: 0 23px;
+        background-color: $color_grey_3;
+        border-radius: .3rem .3rem 0 0;
+
+        > span {
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: $color_grey_3;
+            border-radius: 100%;
+
+            + span {
+                margin-left: 4px;
+            }
+        }
+    }
+    .rui-box-window-image {
+        display: block;
+        overflow: hidden;
+        border: 1px solid $color_grey_2;
+        border-radius: .3rem;
+        transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+        will-change: transform;
+        transform: translateY(0);
+
+        > img {
+            width: 100%;
+            border-radius: .3rem;
+        }
+
+        .rui-box-window-bar + & {
+            border-top: 0;
+            border-radius: 0 0 .3rem .3rem;
+
+            > img {
+                border-radius: 0 0 .3rem .3rem;
+            }
+        }
+    }
+
+    &:hover,
+    &.hover {
+        .rui-box-window-image {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, .03);
+            transform: translateY(-3px);
+        }
+    }
+}

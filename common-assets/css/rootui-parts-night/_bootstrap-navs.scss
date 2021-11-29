@@ -1,0 +1,148 @@
+.nav {
+    .nav .nav-link {
+        &::before {
+            background-color: $color_dark_5;
+        }
+        &:hover::before,
+        &.hover::before,
+        &:focus::before,
+        &.focus::before,
+        &.active::before {
+            background-color: $color_text_1;
+        }
+    }
+    .nav-link {
+        color: $color_dark_7;
+
+        > span:not([class]) {
+            color: $color_text_1;
+        }
+        > .rui-nav-circle {
+            background-color: $color_dark_2;
+        }
+        > .rui-icon {
+            stroke: $color_dark_6;
+        }
+        > .badge,
+        > .badge-circle {
+            box-shadow: 0 0 0 2px $color_dark_1;
+        }
+
+        &.show {
+            color: $color_dark_6;
+
+            > span:not([class]) {
+                color: $color_text_1;
+            }
+            > .rui-icon {
+                stroke: $color_dark_5;
+            }
+        }
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            color: $color_text_1;
+
+            > span:not([class]) {
+                color: $color_text_1;
+            }
+            > .rui-icon {
+                stroke: $color_text_1;
+            }
+        }
+        &.active {
+            color: $color_text_1;
+
+            > span:not([class]) {
+                color: $color_brand;
+            }
+            > .rui-icon {
+                stroke: $color_brand;
+            }
+        }
+        &.disabled {
+            color: $color_dark_4;
+
+            > span:not([class]) {
+                color: $color_dark_4;
+            }
+            > .rui-icon {
+                stroke: $color_dark_4;
+            }
+        }
+    }
+}
+// Tabs
+.nav-tabs {
+    border-color: $color_dark_3;
+
+    .nav-link {
+        &.show {
+            color: $color_dark_6;
+        }
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            color: $color_text_1;
+        }
+        &.active {
+            color: $color_brand;
+            border-bottom-color: rgba($color_brand, .8);
+        }
+    }
+}
+// Pills
+.nav-pills {
+    background-color: $color_dark_3;
+
+    .nav-link {
+        color: $color_dark_7;
+
+        &.show {
+            color: $color_dark_7;
+        }
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            color: $color_secondary;
+        }
+        &.active {
+            color: $color_secondary;
+            background-color: $color_dark_1;
+        }
+        &.disabled {
+            color: $color_dark_5;
+        }
+    }
+}
+// Sliding
+.rui-tabs-sliding {
+    &.nav-pills {
+        .rui-tabs-link.active {
+            background-color: $color_dark_1;
+        }
+        .rui-tabs-slide {
+            background-color: $color_dark_1;
+        }
+    }
+    &.nav-tabs {
+        .rui-tabs-link.active {
+            border-bottom-color: rgba($color_brand, .8);
+        }
+        .rui-tabs-slide {
+            border-bottom-color: rgba($color_brand, .8);
+        }
+    }
+}
+.rui-tabs-sliding-ready {
+    &.nav-pills .rui-tabs-link.active {
+        background-color: transparent;
+    }
+    &.nav-tabs .rui-tabs-link.active {
+        background-color: transparent;
+        border-bottom-color: transparent;
+    }
+}

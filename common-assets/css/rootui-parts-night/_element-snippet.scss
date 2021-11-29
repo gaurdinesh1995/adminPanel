@@ -1,0 +1,32 @@
+.rui-snippet pre,
+.rui-snippet-single pre {
+    &::-webkit-scrollbar-track {
+        background-color: $color_dark_1;
+    }
+    &::-webkit-scrollbar {
+        background-color: $color_dark_1;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $color_dark_4;
+    }
+}
+.rui-snippet {
+    &.rui-snippet-frame .rui-snippet-preview,
+    &.rui-snippet-frame .rui-snippet-html,
+    &.rui-snippet-frame .rui-snippet-js {
+        border-color: $color_dark_3;
+    }
+    &.rui-snippet-frame-preview .rui-snippet-html,
+    &.rui-snippet-frame-preview .rui-snippet-js {
+        border-color: $color_dark_3;
+    }
+}
+.rui-snippet-single {
+    &.rui-snippet-filled {
+        background-color: $color_dark_2;
+    }
+    &.rui-snippet-frame {
+        background-color: $color_dark_1;
+        border-color: $color_dark_3;
+    }
+}

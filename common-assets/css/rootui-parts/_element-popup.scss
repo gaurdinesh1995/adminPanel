@@ -1,0 +1,108 @@
+.rui-popup {
+    display: none;
+    padding: 30px;
+    border-radius: .25rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .03);
+
+    @include media-breakpoint-up(lg) {
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+            border-radius: .25rem;
+        }
+        &::-webkit-scrollbar {
+            width: 4px;
+            background-color: #fff;
+            border-radius: .25rem;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $color_grey_4;
+            border-radius: .25rem;
+        }
+    }
+
+    .fancybox-close-small {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        top: 18px;
+        right: 16px;
+        width: 38px;
+        height: 38px;
+        padding: 0;
+        color: $color_grey_5;
+        transition: color .15s ease-in-out;
+
+        > svg {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            z-index: 1;
+        }
+
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+        }
+        &.fancybox-focus {
+            outline: 0;
+        }
+    }
+}
+
+// Search
+.rui-popup-search {
+    position: absolute;
+    top: 100px;
+    margin-bottom: 100px;
+    will-change: transform;
+    transition: transform .15s ease-in-out;
+    transform: scale(.9) translateY(-30px) translateX(100px);
+
+    @include media-breakpoint-down(lg) {
+        top: 30px;
+        width: calc(100% - 60px);
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    @include media-breakpoint-down(sm) {
+        top: 10px;
+        width: calc(100% - 20px);
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    @include media-breakpoint-down(xs) {
+        top: 5px;
+        width: calc(100% - 10px);
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+}
+.fancybox-slide--current .rui-popup-search,
+.fancybox-is-closing .rui-popup-search {
+    transform: scale(1) translateY(0) translateX(0);
+}
+
+// Messenger
+.rui-popup-messenger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    width: 420px;
+    padding: 0;
+    overflow: hidden;
+
+    @include media-breakpoint-down(sm) {
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        max-width: calc(100% - 20px);
+    }
+    @include media-breakpoint-down(xs) {
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        width: calc(100% - 10px);
+        max-width: none;
+    }
+}

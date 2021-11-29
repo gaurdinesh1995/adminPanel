@@ -1,0 +1,39 @@
+.rui-timeline {
+    .rui-timeline-line {
+        background-color: $color_dark_3;
+    }
+    .rui-timeline-item:hover,
+    .rui-timeline-item.hover {
+        .rui-timeline-icon {
+            background-color: $color_dark_2;
+        }
+        .rui-timeline-date {
+            color: $color_secondary;
+        }
+    }
+    .rui-timeline-icon {
+        color: $color_secondary;
+        background-color: $color_dark_1;
+        border-color: $color_dark_3;
+    }
+    .rui-timeline-content {
+        border-color: $color_dark_3;
+    }
+    .rui-timeline-date {
+        color: $color_dark_6;
+    }
+    @include media-breakpoint-down(lg) {
+        .rui-timeline-line {
+            border-right-color: $color_dark_3;
+            border-left-color: $color_dark_3;
+        }
+        .rui-timeline-content {
+            background-color: $color_dark_1;
+        }
+        &.rui-timeline-left .rui-timeline-line,
+        &.rui-timeline-left-xl .rui-timeline-line,
+        &.rui-timeline-left-lg .rui-timeline-line {
+            background-color: $color_dark_3;
+        }
+    }
+}

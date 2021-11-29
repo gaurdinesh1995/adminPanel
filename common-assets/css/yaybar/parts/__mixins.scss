@@ -1,0 +1,70 @@
+// Mixin for menu levels
+@mixin sidebarLevels($num, $max, $colors, $rtl: false) {
+    // first level
+    @if $num == 1 {
+        // nothing to do there
+    }
+
+    // other levels
+    @else {
+        > li > a {
+            @if $rtl {
+                padding-right: $dropdown_offset * $num * 1.3;
+                padding-left: $dropdown_offset;
+            }
+            @else {
+                padding-right: $dropdown_offset;
+                padding-left: $dropdown_offset * $num * 1.3;
+            }
+        }
+    }
+
+    @if $num <= $max {
+        > li {
+            @if not $rtl {
+                &.yay-item-active > a,
+                &.yay-submenu-open > a,
+                &.yay-submenu-open > .yay-submenu {
+                    background-color: nth($colors, $num);
+                }
+            }
+
+            // second level menu
+            > .yay-submenu {
+                @include sidebarLevels($num + 1, $max, $colors, $rtl);
+            }
+        }
+    }
+}
+
+// Mixin to fix paddings in menu levels for small bar
+@mixin sidebarLevelsSmallBar($num, $max, $rtl: false) {
+    // first level
+    @if $num == 1 {
+        > li > a {
+            padding: $items_vertical_padding $items_horizontal_padding;
+        }
+    }
+
+    // other levels
+    @else {
+        > li > a {
+            @if $rtl {
+                padding-right: $dropdown_offset * $num * 1.3;
+                padding-left: $items_horizontal_padding;
+            }
+            @else {
+                padding-left: $dropdown_offset * $num * 1.3;
+            }
+        }
+    }
+
+    @if $num <= $max {
+        > li {
+            // second level menu
+            > .yay-submenu {
+                @include sidebarLevelsSmallBar($num + 1, $max, $rtl);
+            }
+        }
+    }
+}

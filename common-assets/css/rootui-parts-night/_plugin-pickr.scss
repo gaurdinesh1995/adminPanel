@@ -1,0 +1,70 @@
+.pcr-app[data-theme="classic"] {
+    background-color: $color_dropdown_bg;
+    border-color: $color_dropdown_border;
+    box-shadow: 0 3px 10px $color_dropdown_shadow;
+
+    .pcr-selection {
+        .pcr-color-preview {
+            .pcr-last-color:focus::before {
+                box-shadow: 0 0 0 .15rem rgba($color_dark_2, .5), 0 0 0 .15rem currentColor;
+            }
+            .pcr-current-color {
+                box-shadow: 0 -12px 0 0 $color_dropdown_bg;
+            }
+        }
+        .pcr-picker {
+            border-color: $color_dark_3;
+        }
+    }
+    .pcr-interaction {
+        .pcr-result {
+            color: $color_text_2;
+            background-color: $color_dark_1;
+            border-color: $color_dark_4;
+
+            &:hover {
+                background-color: $color_dark_1;
+            }
+
+            &:focus {
+                border-color: rgba($color_brand, .6);
+                box-shadow: 0 0 0 .2rem rgba($color_brand, .2);
+            }
+        }
+        .pcr-type {
+            color: $color_secondary;
+            background-color: $color_dark_2;
+
+            &:hover {
+                background-color: $color_dark_3;
+            }
+            &:focus {
+                color: $color_secondary;
+                background-color: $color_dark_4;
+            }
+            &.active {
+                color: $color_secondary;
+                background-color: $color_dark_4;
+            }
+            &:active {
+                background-color: $color_dark_5;
+            }
+        }
+        .pcr-save {
+            color: $color_text_1;
+            background-color: $color_brand;
+
+            &:hover {
+                background-color: darken($color_brand, 5%);
+            }
+            &:focus {
+                color: $color_text_1;
+                background-color: darken($color_brand, 5%);
+                box-shadow: 0 0 0 .2rem rgba($color_brand, .4);
+            }
+            &:active {
+                background-color: darken($color_brand, 10%);
+            }
+        }
+    }
+}

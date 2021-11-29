@@ -1,0 +1,70 @@
+.list-group-item {
+    color: $color_secondary;
+    background-color: $color_dark_1;
+    border-color: $color_dark_3;
+
+    &.active {
+        background-color: $color_brand;
+        border-color: $color_brand;
+    }
+    &.disabled,
+    &:disabled {
+        background-color: $color_dark_1;
+    }
+}
+.list-group-item-action {
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+        color: $color_text_1;
+        background-color: $color_dark_2;
+    }
+    &:active {
+        color: $color_text_1;
+        background-color: $color_dark_3;
+    }
+
+    &.active {
+        background-color: $color_brand;
+
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus,
+        &:active {
+            color: #fff;
+        }
+    }
+}
+.list-group-item-brand,
+.list-group-item-primary,
+.list-group-item-secondary,
+.list-group-item-success,
+.list-group-item-danger,
+.list-group-item-warning,
+.list-group-item-info,
+.list-group-item-light,
+.list-group-item-dark {
+    color: $color_secondary;
+    background-color: $color_dark_1;
+
+    &.list-group-item-action {
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            color: $color_text_1;
+            background-color: $color_dark_2;
+        }
+        &:active {
+            color: $color_text_1;
+            background-color: $color_dark_3;
+        }
+    }
+}
+@each $name, $color in $colors_alerts {
+    .list-group-item-#{$name} {
+        box-shadow: inset 2px 0 0 $color;
+    }
+}

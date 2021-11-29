@@ -1,0 +1,96 @@
+.ct-series:hover > .ct-point {
+    stroke-opacity: 1;
+}
+$colors-chart: (
+    "a": #5e77ff,
+    "b": #abb8ff,
+    "c": #cad2ff,
+    "d": #d9deff,
+    "e": #e6e9ff
+) !default;
+@each $name, $color in $colors-chart {
+    .ct-series-#{$name} {
+        .ct-line,
+        .ct-point,
+        .ct-slice-donut {
+            stroke: $color;
+        }
+        .ct-bar {
+            stroke: rgba($color, .8);
+            stroke-opacity: 1;
+        }
+        .ct-area,
+        .ct-slice-pie,
+        .ct-slice-donut-solid {
+            fill: rgba($color, .8);
+            fill-opacity: 1;
+        }
+    }
+}
+.ct-line {
+    stroke-width: 2px;
+}
+.ct-point {
+    stroke-width: 6px;
+    stroke-opacity: 0;
+    transition: stroke-opacity .15s ease-in-out;
+}
+.ct-label {
+    font-size: 12px;
+    color: $color_grey_5;
+
+    &.ct-horizontal.ct-end {
+        justify-content: center;
+        margin-top: 5px;
+        margin-left: -50%;
+    }
+}
+.ct-bar {
+    stroke-width: 43px;
+}
+.ct-chart-bar {
+    .ct-label.ct-horizontal.ct-end {
+        margin-left: 0;
+    }
+}
+.ct-chart-pie {
+    .ct-series:hover ~ g:last-child > .ct-label {
+        opacity: 1;
+    }
+    .ct-label {
+        fill: #fff;
+        opacity: 0;
+        will-change: opacity;
+        transition: opacity .1s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.rui-chartist {
+    position: relative;
+}
+.rui-chartist-donut {
+    margin: -5px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        border: 3px solid $color_grey_2;
+        border-radius: 100%;
+    }
+    .ct-series-a .ct-slice-donut {
+        // stylelint-disable-next-line
+        stroke: url(#gradient);
+        stroke-linecap: round;
+    }
+    .ct-series-b .ct-slice-donut {
+        stroke: transparent;
+    }
+}

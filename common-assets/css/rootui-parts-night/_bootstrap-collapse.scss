@@ -1,0 +1,12 @@
+.collapse-link {
+    color: $color_secondary;
+    background-color: $color_dark_2;
+
+    &:hover,
+    &.hover {
+        color: $color_text_1;
+    }
+    &:not(.collapsed) {
+        color: $color_text_1;
+    }
+}

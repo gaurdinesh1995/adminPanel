@@ -1,0 +1,24 @@
+/**
+ * Content overlay.
+ */
+.yaybar.yay-content-overlay ~ .content-wrap::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    visibility: visible;
+    background-color: $content_overlay_color;
+    opacity: 1;
+    transition: opacity $sidebar_toggle_transition, visibility $sidebar_toggle_transition;
+    will-change: opacity, visibility;
+    z-index: $z_content_overlay;
+}
+
+.yay-hide .yaybar.yay-content-overlay ~ .content-wrap::after {
+    visibility: hidden;
+    opacity: 0;
+}

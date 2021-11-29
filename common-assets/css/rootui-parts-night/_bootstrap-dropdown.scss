@@ -1,0 +1,201 @@
+.dropdown {
+    .dropdown-item {
+        color: $color_dark_7;
+
+        > span:not([class]) {
+            color: $color_text_1;
+        }
+        > .rui-dropdown-circle {
+            background-color: $color_dark_2;
+        }
+        > .rui-icon {
+            stroke: $color_dark_6;
+        }
+        &:hover,
+        &.hover {
+            color: $color_text_1;
+
+            > span:not([class]) {
+                color: $color_text_1;
+            }
+            > .rui-icon {
+                stroke: $color_text_1;
+            }
+        }
+        &.active {
+            color: $color_text_1;
+
+            > span:not([class]) {
+                color: $color_text_1;
+            }
+            > .rui-icon {
+                stroke: $color_text_1;
+            }
+        }
+    }
+}
+.dropdown:not(.dropdown-hover) {
+    &:focus,
+    &.focus {
+        color: $color_text_1;
+
+        > span:not([class]) {
+            color: $color_text_1;
+        }
+        > .rui-icon {
+            stroke: $color_text_1;
+        }
+    }
+    &:active {
+        color: $color_brand;
+
+        > span:not([class]) {
+            color: $color_brand;
+        }
+        > .rui-icon {
+            stroke: $color_brand;
+        }
+    }
+    &.show > .dropdown-item {
+        color: $color_text_1;
+        background-color: transparent;
+
+        > span:not([class]) {
+            color: $color_text_1;
+        }
+        > .rui-icon {
+            stroke: $color_text_1;
+        }
+    }
+}
+
+// Switch
+.dropdown .dropdown-item-switch.custom-switch,
+.dropdown.show .dropdown-item-switch.custom-switch {
+    .dropdown-item:hover::after {
+        background-color: $color_text_1;
+    }
+    > input:checked ~ .dropdown-item {
+        color: $color_brand;
+
+        > span:not([class]) {
+            color: $color_brand;
+        }
+        > .rui-icon {
+            stroke: $color_brand;
+        }
+    }
+}
+
+// Hover
+.dropdown-hover.hover > .dropdown-item {
+    color: $color_text_1;
+
+    > span:not([class]) {
+        color: $color_text_1;
+    }
+    > .rui-icon {
+        stroke: $color_text_1;
+    }
+    &.btn-custom-round,
+    > .btn-custom-round {
+        color: $color_secondary;
+
+        &::after {
+            background-color: $color_dark_2;
+        }
+    }
+}
+
+// Menu
+.dropdown-menu {
+    background-color: $color_dropdown_bg;
+    border-color: $color_dropdown_border;
+    box-shadow: 0 3px 10px $color_dropdown_shadow;
+}
+
+// Menu Scroll
+.dropdown-menu-scroll {
+    &::-webkit-scrollbar-track {
+        background-color: $color_dropdown_bg;
+    }
+    &::-webkit-scrollbar {
+        background-color: $color_dropdown_bg;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $color_dark_3;
+    }
+}
+
+
+// Dropdown
+.dropdown-triangle .dropdown-menu[x-placement="bottom-start"],
+.dropdown-triangle .dropdown-menu[x-placement="bottom-end"],
+.dropdown-triangle .dropdown-menu {
+    > .dropdown-menu-triangle {
+        border-color: transparent;
+        border-bottom-color: $color_dropdown_bg;
+
+        &::before {
+            border-color: transparent;
+            border-bottom-color: $color_dropdown_border;
+        }
+    }
+}
+
+// Dropup
+.dropdown-triangle .dropdown-menu[x-placement="top-start"],
+.dropdown-triangle .dropdown-menu[x-placement="top-end"] {
+    > .dropdown-menu-triangle {
+        border-color: transparent;
+        border-top-color: $color_dropdown_bg;
+
+        &::before {
+            border-color: transparent;
+            border-top-color: $color_dropdown_border;
+        }
+    }
+}
+
+// Dropright and Dropleft
+.dropdown-triangle .dropdown-menu {
+    // Dropright
+    &[x-placement="right-start"] > .dropdown-menu-triangle {
+        border-color: transparent;
+        border-right-color: $color_dropdown_bg;
+
+        &::before {
+            border-color: transparent;
+            border-right-color: $color_dropdown_border;
+        }
+    }
+    &[x-placement="right-end"] > .dropdown-menu-triangle {
+        border-color: transparent;
+        border-right-color: $color_dropdown_bg;
+
+        &::before {
+            border-color: transparent;
+            border-right-color: $color_dropdown_border;
+        }
+    }
+
+    // Dropleft
+    &[x-placement="left-start"] > .dropdown-menu-triangle {
+        border-color: transparent;
+        border-left-color: $color_dropdown_bg;
+
+        &::before {
+            border-color: transparent;
+            border-left-color: $color_dropdown_border;
+        }
+    }
+    &[x-placement="left-end"] > .dropdown-menu-triangle {
+        border-color: transparent;
+        border-left-color: $color_dropdown_bg;
+
+        &::before {
+            border-color: transparent;
+            border-left-color: $color_dropdown_border;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.rui-sign {
+    .rui-sign-form-cloud {
+        background-color: $color_dark_1;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .04%);
+    }
+    .rui-sign-or {
+        color: $color_dark_5;
+
+        &::before,
+        &::after {
+            border-bottom-color: $color_dark_3;
+        }
+    }
+    a:not(.btn) {
+        color: $color_dark_6;
+
+        &:hover {
+            color: $color_text_2;
+        }
+    }
+}

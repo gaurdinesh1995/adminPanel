@@ -1,0 +1,69 @@
+.rui-datatable {
+    thead th {
+        &.sorting_asc > .icon,
+        &.sorting_desc > .rui-icon {
+            stroke: $color_secondary;
+        }
+        > .rui-icon {
+            stroke: $color_dark_7;
+        }
+    }
+}
+.dataTables_length {
+    select {
+        color: $color_secondary;
+        background-color: $color_dark_1;
+        border-color: $color_dark_4;
+
+        &:focus {
+            border-color: rgba($color_brand, .6);
+            box-shadow: 0 0 0 .2rem rgba($color_brand, .2);
+        }
+    }
+}
+.dataTables_filter {
+    > label {
+        color: $color_secondary;
+    }
+    input {
+        color: $color_dark_7;
+        background-color: $color_dark_1;
+        border-color: $color_dark_4;
+
+        &:focus {
+            color: $color_text_2;
+            border-color: rgba($color_brand, .6);
+            box-shadow: 0 0 0 .2rem rgba($color_brand, .2);
+        }
+    }
+}
+.dataTables_info {
+    color: $color_dark_6;
+}
+.dataTables_paginate {
+    > a,
+    > span > a {
+        color: $color_dark_7;
+        background-color: $color_dark_2;
+
+        &:hover {
+            color: $color_secondary;
+            background-color: $color_dark_3;
+        }
+        &:focus {
+            color: $color_secondary;
+            background-color: $color_dark_3;
+        }
+        &:active {
+            background-color: $color_dark_4;
+        }
+        &.current {
+            color: $color_text_1;
+            background-color: $color_brand;
+        }
+        &.disabled {
+            color: $color_dark_5;
+            background-color: $color_dark_2;
+        }
+    }
+}

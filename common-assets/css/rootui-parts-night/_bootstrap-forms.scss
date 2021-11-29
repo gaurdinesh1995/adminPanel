@@ -1,0 +1,218 @@
+/* Placeholders */
+::placeholder,
+.form-control::placeholder {
+    color: $color_dark_7;
+}
+
+// Form Control
+.form-control {
+    color: $color_dark_7;
+    background-color: $color_dark_1;
+    border-color: $color_dark_4;
+
+    &:focus,
+    &.focus {
+        color: $color_text_2;
+        background-color: $color_dark_1;
+        border-color: rgba($color_brand, .6);
+        box-shadow: 0 0 0 .2rem rgba($color_brand, .2);
+    }
+    &:disabled {
+        background-color: $color_dark_3;
+        border-color: $color_dark_4;
+    }
+}
+.form-control-filled {
+    background-color: $color_dark_2;
+    border-color: $color_dark_3;
+
+    &:focus,
+    &.focus {
+        background-color: $color_dark_2;
+    }
+}
+.form-control-clean {
+    &:hover,
+    &.hover {
+        color: $color_text_1;
+    }
+    &:not(.disabled):not(:disabled):active {
+        color: $color_text_1;
+    }
+}
+// Input Group
+.input-group {
+    .input-group-append,
+    .input-group-prepend {
+        background-color: transparent;
+    }
+}
+.input-group-text {
+    color: $color_dark_7;
+    background-color: $color_dark_2;
+    border-color: $color_dark_4;
+}
+.input-group-clean > .form-control::placeholder {
+    color: $color_dark_5;
+}
+
+// Custom
+.custom-control-label::before {
+    background-color: $color_dark_5;
+    border-color: $color_dark_5;
+}
+.custom-checkbox .custom-control-input,
+.custom-radio .custom-control-input,
+.custom-switch .custom-control-input {
+    &:not(:disabled):active ~ .custom-control-label::before {
+        background-color: lighten($color_brand, 5%);
+        border-color: lighten($color_brand, 5%);
+    }
+    &:checked ~ .custom-control-label::before {
+        background-color: $color_brand;
+        border-color: $color_brand;
+    }
+    &:focus:not(:checked) ~ .custom-control-label::before {
+        border-color: $color_dark_5;
+    }
+    &:disabled ~ .custom-control-label {
+        color: $color_dark_7;
+
+        &::before {
+            background-color: $color_dark_4;
+            border-color: $color_dark_4;
+        }
+    }
+}
+// Switches
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    background-color: $color_text_1;
+}
+.custom-switch .custom-control-label::after {
+    background-color: $color_text_1;
+}
+// Select
+.custom-select {
+    color: $color_dark_7;
+    background-color: $color_dark_1;
+    border-color: $color_dark_4;
+
+    &:focus,
+    &.focus {
+        border-color: rgba($color_brand, .6);
+        box-shadow: 0 0 0 .2rem rgba($color_brand, .25);
+    }
+    &:disabled {
+        background-color: $color_dark_3;
+        border-color: $color_dark_4;
+    }
+}
+// Range
+.custom-range {
+    &::-webkit-slider-runnable-track {
+        background-color: $color_dark_3;
+    }
+    &::-moz-range-track {
+        background-color: $color_dark_3;
+    }
+    &::-ms-track {
+        color: transparent;
+        background: none;
+        border: none;
+    }
+    &::-ms-fill-lower,
+    &::-ms-fill-upper {
+        background-color: $color_dark_3;
+    }
+    &::-webkit-slider-thumb {
+        background: $color_brand;
+
+        &:active {
+            background: lighten($color_brand, 5%);
+        }
+    }
+    &::-moz-range-thumb {
+        background: $color_brand;
+
+        &:active {
+            background: lighten($color_brand, 5%);
+        }
+    }
+    &::-ms-thumb {
+        background-color: $color_brand;
+
+        &:active {
+            background-color: lighten($color_brand, 5%);
+        }
+    }
+    &:focus {
+        &::-webkit-slider-thumb {
+            box-shadow: 0 0 0 1px $color_dark_1, 0 0 0 .2rem rgba($color_brand, .5);
+        }
+        &::-moz-range-thumb {
+            box-shadow: 0 0 0 1px $color_dark_1, 0 0 0 .2rem rgba($color_brand, .5);
+        }
+        &::-ms-thumb {
+            box-shadow: 0 0 0 1px $color_dark_1, 0 0 0 .2rem rgba($color_brand, .5);
+        }
+    }
+}
+// Validation
+.was-validated {
+    .form-control:invalid,
+    .form-control.is-invalid,
+    .custom-select:invalid,
+    .custom-select.is-invalid {
+        background-color: lighten($color_danger, 36%);
+        border-color: lighten($color_danger, 25%);
+
+        &:focus {
+            border-color: lighten($color_danger, 20%);
+            box-shadow: 0 0 0 .2rem rgba($color_danger, .15);
+        }
+    }
+    .form-control:valid,
+    .form-control.is-valid,
+    .custom-select:valid,
+    .custom-select.is-valid {
+        background-color: lighten($color_success, 48%);
+        border-color: lighten($color_success, 25%);
+
+        &:focus {
+            border-color: lighten($color_success, 20%);
+            box-shadow: 0 0 0 .2rem rgba($color_success, .15);
+        }
+    }
+    .custom-control-input:invalid ~ .custom-control-label::before,
+    .custom-control-input.is-invalid ~ .custom-control-label::before {
+        background-color: lighten($color_danger, 25%);
+        border-color: lighten($color_danger, 25%);
+    }
+    .custom-control-input:valid ~ .custom-control-label::before,
+    .custom-control-input.is-valid ~ .custom-control-label::before {
+        background-color: lighten($color_success, 25%);
+        border-color: lighten($color_success, 25%);
+    }
+    .custom-control-input:invalid:focus:not(:checked) ~ .custom-control-label::before,
+    .custom-control-input.is-invalid:focus:not(:checked) ~ .custom-control-label::before {
+        background-color: lighten($color_danger, 20%);
+        border-color: lighten($color_danger, 20%);
+    }
+    .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before,
+    .custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before {
+        background-color: lighten($color_success, 20%);
+        border-color: lighten($color_success, 20%);
+    }
+    .custom-control-input:invalid ~ .custom-control-label,
+    .custom-control-input.is-invalid ~ .custom-control-label,
+    .custom-control-input:valid ~ .custom-control-label,
+    .custom-control-input.is-valid ~ .custom-control-label {
+        color: $color_text_1;
+    }
+    .invalid-feedback {
+        color: lighten($color_danger, 15%);
+    }
+    .valid-feedback {
+        color: lighten($color_success, 15%);
+    }
+}

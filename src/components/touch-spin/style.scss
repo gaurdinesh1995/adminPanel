@@ -1,0 +1,7 @@
+@import "../../../common-assets/css/variables";
+@import "../../../common-assets/css/rootui-parts/plugin-touchspin";
+
+.rui-touchspin input::-webkit-inner-spin-button,
+.rui-touchspin input::-webkit-outer-spin-button {
+  appearance: none;
+}

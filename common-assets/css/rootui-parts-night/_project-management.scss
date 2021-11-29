@@ -1,0 +1,23 @@
+// Task
+.rui-project-task-search {
+    border-top-color: $color_dark_3;
+}
+.rui-project-task-info {
+    background-color: $color_dark_2;
+    border-top-color: $color_dark_3;
+}
+.rui-project-task-info-link {
+    color: $color_secondary;
+
+    &:hover,
+    &.hover {
+        color: $color_text_1;
+
+        > .rui-project-task-info-icon {
+            color: $color_text_1;
+        }
+    }
+}
+.rui-project-task-info-icon {
+    color: $color_dark_6;
+}

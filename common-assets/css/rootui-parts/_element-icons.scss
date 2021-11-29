@@ -1,0 +1,12 @@
+.rui-icon {
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+
+    &.rui-icon-stroke-1_5 {
+        stroke-width: 1.5px;
+    }
+    &.rui-icon-stroke-1 {
+        stroke-width: 1px;
+    }
+}

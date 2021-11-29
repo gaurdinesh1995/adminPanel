@@ -1,0 +1,25 @@
+.carousel-light {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 70px;
+        max-width: 30%;
+        color: $color_grey_5;
+        transition: color .15s ease-in-out;
+
+        &:hover,
+        &.hover {
+            color: $color_secondary;
+        }
+    }
+    .carousel-indicators {
+        margin-bottom: 20px;
+
+        li {
+            background-color: $color_grey_5;
+            transition: opacity .15s ease-in-out;
+        }
+    }
+    .carousel-caption {
+        color: $color_grey_5;
+    }
+}

@@ -1,0 +1,92 @@
+.daterangepicker {
+    background-color: $color_dropdown_bg;
+    border-color: $color_dropdown_border;
+    box-shadow: 0 3px 10px $color_dropdown_shadow;
+
+    &.show-calendar {
+        .drp-buttons {
+            .drp-selected {
+                color: $color_dark_6;
+            }
+            .btn {
+                background-color: $color_brand;
+                border-color: $color_brand;
+
+                &:hover {
+                    background-color: darken($color_brand, 10%);
+                    border-color: darken($color_brand, 10%);
+                }
+                &:focus {
+                    box-shadow: 0 0 0 .2rem rgba($color_brand, .5);
+                }
+
+                &.btn-default {
+                    color: $color_secondary;
+
+                    &:hover {
+                        color: $color_text_1;
+                    }
+                }
+            }
+        }
+    }
+
+    .calendar-table {
+        border-color: transparent;
+
+        thead th {
+            color: $color_text_2;
+        }
+        tbody td {
+            color: $color_secondary;
+
+            &:hover {
+                color: $color_text_1;
+
+                &::after {
+                    background-color: $color_dark_2;
+                }
+            }
+            &.in-range::after {
+                background-color: $color_dark_3;
+            }
+            &.start-date,
+            &.end-date {
+                color: $color_text_1;
+
+                &::after {
+                    background-color: rgba($color_brand, .8);
+                }
+            }
+            &.off {
+                color: $color_dark_6;
+
+                &.in-range {
+                    background-color: $color_dropdown_bg;
+                }
+
+                &::after {
+                    background-color: $color_dropdown_bg;
+                }
+                &:hover {
+                    color: $color_text_1;
+
+                    &::after {
+                        background-color: $color_dark_2;
+                    }
+                }
+            }
+        }
+        .prev,
+        .next {
+            color: $color_dark_6;
+
+            &:hover {
+                color: $color_text_1;
+            }
+        }
+        .month {
+            color: $color_secondary;
+        }
+    }
+}

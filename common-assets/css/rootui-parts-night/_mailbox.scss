@@ -1,0 +1,70 @@
+.rui-mailbox {
+    border-color: $color_dark_3;
+
+    // Head
+    .rui-mailbox-head {
+        border-bottom-color: $color_dark_3;
+    }
+    .rui-mailbox-write {
+        color: #fff;
+        background-color: rgba($color_brand, .8);
+    }
+
+    // Footer
+    .rui-mailbox-footer {
+        background-color: $color_dark_1;
+        border-top-color: $color_dark_3;
+    }
+
+    // List
+    .rui-mailbox-list {
+        background-color: $color_dark_1;
+        border-right-color: $color_dark_3;
+    }
+
+    .rui-mailbox-content-head + .rui-mailbox-content-body {
+        border-top-color: $color_dark_3;
+    }
+    .rui-mailbox-content-subtitle {
+        color: $color_secondary;
+    }
+    .rui-mailbox-content-date {
+        color: $color_dark_6;
+    }
+
+    // Item
+    .rui-mailbox-item {
+        background-color: $color_dark_1;
+
+        &:hover,
+        &.hover,
+        &.active {
+            background-color: $color_dark_2;
+        }
+    }
+    .rui-mailbox-item-unread .rui-mailbox-item-title::after {
+        background-color: $color_dark_4;
+    }
+    .rui-mailbox-item-subtitle {
+        color: $color_text_1;
+    }
+    .rui-mailbox-item-text {
+        color: $color_dark_6;
+    }
+    .rui-mailbox-item-date {
+        color: $color_dark_6;
+    }
+    @include media-breakpoint-down(lg) {
+        // Head
+        .rui-mailbox-head {
+            background-color: $color_dark_1;
+        }
+        .rui-mailbox-item.active {
+            background-color: transparent;
+        }
+        // Content
+        .rui-mailbox-content {
+            background-color: $color_dark_1;
+        }
+    }
+}

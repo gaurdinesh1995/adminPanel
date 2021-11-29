@@ -1,0 +1,71 @@
+.swal2-container.swal2-shown {
+    background-color: rgba($color_dark_2, .9);
+}
+.swal2-popup {
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .03);
+    z-index: 1;
+
+    .swal2-icon {
+        margin-top: 0;
+    }
+    .swal2-title {
+        margin-bottom: 1.4rem;
+        font-size: 1.43rem;
+        font-weight: 400;
+        color: $color_text_1;
+        text-transform: capitalize;
+    }
+    .swal2-type {
+        text-transform: capitalize;
+    }
+    .swal2-content {
+        font-size: 1rem;
+        color: $color_text_2;
+    }
+    .swal2-styled {
+        min-width: 100px;
+        padding: 9.5px 15px;
+        margin: 8px 0 0;
+
+        &.swal2-confirm {
+            font-size: 13px;
+            background-color: $color_brand;
+            border-radius: .25rem;
+            transition: background-color .1s ease-in-out, box-shadow .1s ease-in-out;
+
+            &:hover {
+                background-color: darken($color_brand, 10%);
+            }
+            &:focus {
+                box-shadow: 0 0 0 .2rem rgba($color_brand, .5);
+            }
+        }
+    }
+    .swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+        background-image: none;
+    }
+}
+@each $name, $color in $colors_alerts {
+    .swal2-icon.swal2-#{$name} {
+        color: $color;
+        border-color: rgba($color, .3);
+
+        [class^=swal2-#{$name}-line] {
+            background-color: $color;
+        }
+        .swal2-success-ring {
+            border-color: rgba($color, .3);
+        }
+    }
+    .swal2-icon.swal2-error {
+        border-color: rgba($color_danger, .3);
+
+        [class^="swal2-x-mark-line"] {
+            background-color: $color_danger;
+        }
+        .swal2-success-ring {
+            border-color: rgba($color_danger, .3);
+        }
+    }
+}

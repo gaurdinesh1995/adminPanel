@@ -1,0 +1,23 @@
+.editor-toolbar {
+    border-color: $color_dark_3;
+
+    button {
+        color: $color_secondary;
+
+        &:hover {
+            color: $color_text_1;
+        }
+    }
+    i.separator {
+        border-right-color: transparent;
+        border-left-color: $color_dark_3;
+    }
+}
+.CodeMirror {
+    color: $color_text_2;
+    background-color: $color_dark_1;
+    border-color: $color_dark_3;
+}
+.editor-statusbar {
+    color: $color_dark_6;
+}

@@ -1,0 +1,43 @@
+.rui-section-lines {
+    // Page
+    .rui-page-title {
+        border-bottom: 1px solid $color_separator;
+    }
+
+    // Footer
+    .rui-footer {
+        border-top: 1px solid $color_separator;
+    }
+
+    // Navbar
+    .rui-navbar-top {
+        border-bottom: 1px solid $color_separator;
+    }
+    .rui-navbar-mobile {
+        box-shadow: -5px 5px 0 0 #fff, 5px 5px 0 0 #fff, -5px -5px 0 0 #fff, 5px -5px 0 0 #fff, -5px 6px 0 $color_separator, 5px 6px 0 $color_separator;
+    }
+
+    // Navbar dark
+    .rui-navbar-dark {
+        &.rui-navbar-top {
+            border-bottom-color: $color_dark_3;
+        }
+        &.rui-navbar-mobile {
+            box-shadow: -5px 5px 0 0 $color_dark_1, 5px 5px 0 0 $color_dark_1, -5px -5px 0 0 $color_dark_1, 5px -5px 0 0 $color_dark_1, -5px 6px 0 $color_dark_3, 5px 6px 0 $color_dark_3;
+        }
+    }
+
+    // Yaybar
+    &.yay-hide .yaybar.rui-yaybar.yay-overlay {
+        box-shadow: 5px 0 0 #fff, -5px 0 0 #fff, 6px 0 0 $color_separator;
+    }
+    .rui-yaybar {
+        box-shadow: 1px 0 0 $color_separator;
+    }
+    .rui-yaybar-icons {
+        box-shadow: 0 -1px 0 $color_separator;
+    }
+    .rui-yaybar-dark .rui-yaybar-icons {
+        box-shadow: 0 -1px 0 $color_dark_3;
+    }
+}

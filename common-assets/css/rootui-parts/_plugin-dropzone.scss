@@ -1,0 +1,323 @@
+.rui-dropzone {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    border: 1px solid $color_separator;
+    border-radius: .25rem;
+    transition: border-color .2s ease-in-out;
+
+    .rui-dropzone-images {
+        display: none;
+    }
+
+    &.dz-started {
+        padding: 15px;
+    }
+    &:hover {
+        border-color: darken($color_separator, 3);
+    }
+    &.dz-drag-hover {
+        border-color: lighten($color_brand, 10%);
+
+        .dz-message {
+            opacity: 1;
+        }
+    }
+    > .rui-dropzone-remove-icon {
+        display: none;
+    }
+    .rui-dropzone-input {
+        display: none;
+    }
+    .dz-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 250px;
+        margin: -5px 0;
+
+    }
+    .rui-dropzone-icon {
+        margin-bottom: 20px;
+        color: $color_grey_4;
+
+        > .rui-icon {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .rui-dropzone-text {
+        font-size: 1.29rem;
+        color: $color_secondary;
+    }
+
+    @include media-breakpoint-down(xs) {
+        min-height: 100px;
+
+        .rui-dropzone-icon > .rui-icon {
+            width: 40px;
+            height: 40px;
+        }
+        .rui-dropzone-text {
+            font-size: 1rem;
+        }
+    }
+    .dz-preview,
+    .dz-preview.dz-file-preview {
+        flex: 0 0 16.6%;
+        max-width: 16.6%;
+        padding: 15px;
+        margin: 0;
+
+        @include media-breakpoint-down(lg) {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+        @include media-breakpoint-down(sm) {
+            flex: 0 0 33.3%;
+            max-width: 33.3%;
+        }
+        @include media-breakpoint-down(xs) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .dz-remove {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 25px;
+            right: 25px;
+            width: 16px;
+            height: 16px;
+            color: $color_grey_5;
+            background-color: #fff;
+            border-radius: .2rem;
+            opacity: 0;
+            transition: opacity .2s ease-in-out, color .1s ease-in-out;
+            z-index: 100;
+
+            > .rui-icon {
+                width: 14px;
+                height: 14px;
+                cursor: pointer;
+            }
+            > .rui-icon > line {
+                cursor: pointer;
+            }
+            &:hover {
+                color: $color_secondary;
+            }
+        }
+        &.dz-error .dz-image::before {
+            content: "";
+        }
+        .dz-image:not(.rui-dropzone-image) {
+            width: auto;
+            height: auto;
+            background: none;
+            background-color: $color_grey_2;
+            border-radius: .25rem;
+
+            &::before {
+                content: "";
+                display: block;
+                margin-top: 100%;
+            }
+
+            > img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                // stylelint-disable-next-line
+                font-family: "object-fit: cover";
+                object-fit: cover;
+            }
+
+        }
+        .rui-dropzone-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: auto;
+            background: none;
+            background-color: #fff;
+            border: 1px solid $color_separator;
+            border-radius: .25rem;
+            transition: background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+            &::before {
+                content: "";
+                display: block;
+                margin-top: 100%;
+            }
+
+            > img {
+                position: absolute;
+            }
+        }
+        .dz-details {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            opacity: 1;
+
+            .dz-size {
+                display: flex;
+                order: 1;
+                margin: 4px 0 -5px;
+                font-size: 11px;
+                color: $color_grey_5;
+
+                > span {
+                    padding: 0;
+                    background-color: transparent;
+                }
+                strong {
+                    font-weight: 400;
+                }
+            }
+            .dz-filename {
+                display: flex;
+                order: 0;
+                margin-top: 10px;
+                overflow: hidden;
+                color: $color_secondary;
+
+                > span {
+                    padding: 0;
+                }
+
+                &:not(:hover) span {
+                    border: 0;
+                }
+                &:hover span {
+                    border: 0;
+                }
+            }
+        }
+        .dz-progress {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            left: 15px;
+            width: auto;
+            height: auto;
+            margin: 0;
+            background-color: rgba(255, 255, 255, .95);
+            border-radius: .25rem;
+
+            &::before {
+                content: "";
+                display: block;
+                margin-top: 100%;
+            }
+
+            .dz-upload {
+                top: 50%;
+                right: 10px;
+                bottom: auto;
+                left: 10px;
+                max-width: calc(100% - 20px);
+                height: 6px;
+                margin-top: -3px;
+                background: none;
+                background-color: $color_text_1;
+                border-radius: 3px;
+            }
+        }
+        .dz-error-message {
+            display: flex;
+            align-items: flex-start;
+            top: auto;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: auto;
+            padding: 0 0 0 15px;
+            overflow-x: hidden;
+            font-size: 12px;
+            background: $color_danger;
+            border-radius: .2rem;
+
+            > span {
+                display: block;
+                max-height: 57px;
+                padding: 11px 32px 10px 0;
+                margin-right: -17px;
+                overflow-y: scroll;
+            }
+            &::after {
+                display: none;
+            }
+        }
+        @keyframes emergence {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        .dz-error-mark,
+        .dz-success-mark,
+        &.dz-error .dz-error-mark,
+        &.dz-success .dz-success-mark {
+            top: 15px;
+            right: 15px;
+            left: 15px;
+            margin: 0;
+            border-radius: .25rem;
+            opacity: 0;
+            animation: none;
+            z-index: 99;
+
+            &::before {
+                content: "";
+                display: block;
+                margin-top: 100%;
+            }
+
+            > svg {
+                display: none;
+            }
+        }
+        .dz-error-mark,
+        &.dz-error .dz-error-mark {
+            background-color: rgba($color_danger, .2);
+        }
+        &.dz-error .dz-error-mark {
+            opacity: 1;
+        }
+        .dz-success-mark {
+            background-color: rgba($color_success, .2);
+        }
+        &.dz-success .dz-success-mark {
+            animation: emergence 1s ease-in-out;
+        }
+
+        &:hover {
+            .dz-remove {
+                opacity: 1;
+            }
+            .dz-image img {
+                filter: none;
+                transform: none;
+            }
+            .rui-dropzone-image {
+                border-color: $color_separator;
+            }
+        }
+    }
+}
